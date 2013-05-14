@@ -14,12 +14,12 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.world;
+package RPGGrid.world;
 
-import info.gridworld.grid.BoundedGrid;
-import info.gridworld.grid.Grid;
-import info.gridworld.grid.Location;
-import info.gridworld.gui.WorldFrame;
+import RPGGrid.grid.BoundedGrid;
+import RPGGrid.grid.Grid;
+import RPGGrid.grid.Location;
+import RPGGrid.gui.WorldFrame;
 
 import java.util.ArrayList;
 import java.util.Random;

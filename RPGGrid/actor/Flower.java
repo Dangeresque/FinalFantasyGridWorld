@@ -14,7 +14,7 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.actor;
+package RPGGrid.actor;
 
 import java.awt.Color;
 

@@ -17,7 +17,7 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.gui;
+package RPGGrid.gui;
 
 import java.awt.Component;
 import java.awt.Graphics;

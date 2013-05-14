@@ -18,7 +18,7 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.grid;
+package RPGGrid.grid;
 
 /**
  * A <code>Location</code> object represents the row and column of a location

@@ -14,11 +14,11 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.actor;
+package RPGGrid.actor;
 
-import info.gridworld.grid.Grid;
-import info.gridworld.grid.Location;
-import info.gridworld.world.World;
+import RPGGrid.grid.Grid;
+import RPGGrid.grid.Location;
+import RPGGrid.world.World;
 
 import java.util.ArrayList;
 

@@ -16,10 +16,10 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.gui;
+package RPGGrid.gui;
 
-import info.gridworld.grid.Grid;
-import info.gridworld.grid.Location;
+import RPGGrid.grid.Grid;
+import RPGGrid.grid.Location;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -107,7 +107,7 @@ public class GridPanel extends JPanel implements Scrollable,
                 * (cellSize + 1) + 1);
 
         drawWatermark(g2);
-        drawGridlines(g2);
+        //drawGridlines(g2);
         drawOccupants(g2);
         drawCurrentLocation(g2);
     }

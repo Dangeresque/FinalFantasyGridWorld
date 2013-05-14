@@ -14,9 +14,9 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.gui;
+package RPGGrid.gui;
 
-import info.gridworld.grid.Location;
+import RPGGrid.grid.Location;
 
 import java.awt.Component;
 import java.beans.PropertyEditorSupport;

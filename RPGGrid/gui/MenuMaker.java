@@ -14,10 +14,10 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.gui;
+package RPGGrid.gui;
 
-import info.gridworld.grid.Grid;
-import info.gridworld.grid.Location;
+import RPGGrid.grid.Grid;
+import RPGGrid.grid.Location;
 
 import java.awt.Color;
 import java.awt.Component;

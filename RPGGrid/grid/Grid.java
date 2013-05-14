@@ -17,7 +17,7 @@
  * @author Cay Horstmann
  */
 
-package info.gridworld.grid;
+package RPGGrid.grid;
 
 import java.util.ArrayList;
 
