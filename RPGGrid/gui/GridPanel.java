@@ -41,6 +41,11 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import java.io.IOException;
+
 import javax.swing.JPanel;
 import javax.swing.JToolTip;
 import javax.swing.JViewport;
@@ -105,7 +110,17 @@ public class GridPanel extends JPanel implements Scrollable,
         g2.setColor(backgroundColor); 
         g2.fillRect(insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows
                 * (cellSize + 1) + 1);
-
+        
+        // Background image code
+        BufferedImage img = null;
+        
+        try
+        {
+            img = ImageIO.read(new File("IceCave.jpg"));
+        } catch (IOException e) {
+        }
+        g2.drawImage(img, insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1) + 1, 0, 0, img.getWidth(), img.getHeight(), null);
+        //End Image code
         drawWatermark(g2);
         //drawGridlines(g2);
         drawOccupants(g2);
