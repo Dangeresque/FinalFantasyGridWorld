@@ -58,7 +58,12 @@ public class PseudoInfiniteViewport extends JViewport
     public PseudoInfiniteViewport(JScrollPane parent)
     {
         scrollParent = parent;
-        setBackground(Color.lightGray);
+        setBackground(Color.black);
+    }
+
+    public JScrollPane getScroll()
+    {
+        return scrollParent;
     }
 
     /**
@@ -69,8 +74,8 @@ public class PseudoInfiniteViewport extends JViewport
     public void setViewPosition(Point pt)
     {
         boolean isAdjusting = scrollParent.getVerticalScrollBar()
-                .getValueIsAdjusting()
-                || scrollParent.getHorizontalScrollBar().getValueIsAdjusting();
+            .getValueIsAdjusting()
+            || scrollParent.getHorizontalScrollBar().getValueIsAdjusting();
         boolean changed = true;
 
         if (viewIsUnbounded())
@@ -107,7 +112,7 @@ public class PseudoInfiniteViewport extends JViewport
     public Point getViewPosition()
     {
         return (viewIsUnbounded() ? getPanCenterPoint() : super
-                .getViewPosition());
+            .getViewPosition());
     }
 
     /**
@@ -117,7 +122,7 @@ public class PseudoInfiniteViewport extends JViewport
     public Dimension getViewSize()
     {
         return (viewIsUnbounded() ? getView().getPreferredSize() : super
-                .getViewSize());
+            .getViewSize());
     }
 
     // some simple private helpers

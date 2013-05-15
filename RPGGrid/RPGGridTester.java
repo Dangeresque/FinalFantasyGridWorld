@@ -8,9 +8,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
+import java.awt.Point;
+import java.awt.Scrollbar;
+
+import javax.swing.*;
 
 import java.awt.Color;
-
 /**
  * This class runs a world that contains critters. <br />
  * This class is not tested on the AP CS A and AB exams.
@@ -32,12 +35,20 @@ public class RPGGridTester
         world.add(new Location(1, 5), new Flower(Color.RED));
         world.add(new Location(4, 4), new Critter());
         world.show();
-    }
 
-    /*
-    public void zoomRight() {
-        GridPanel.zoomIn();
-        GridPanel.zoomIn();
+        WorldFrame temp = (WorldFrame) world.getJFrame();
+        temp.getDisplay().zoomIn();
+        temp.getDisplay().zoomIn();
+        /*temp.getPseudo().setViewPosition(new Point(500, 500));
+        //temp.reshape(100, 100, 800, 600);
+        // Scrollbar s = new Scrollbar();
+        // s.setBounds(0, 0, 800, 600);
+        JScrollBar vertS = temp.getPseudo().getScroll().getVerticalScrollBar();
+        vertS.setValue(10);
+        temp.getPseudo().getScroll().setVerticalScrollBar(vertS);
+        vertS.updateUI();
+
+        JViewport vp = getEnclosingViewport();
+         */
     }
-    */
 }

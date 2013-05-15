@@ -1,8 +1,8 @@
 #BlueJ package file
-package.editor.height=375
+package.editor.height=357
 package.editor.width=560
-package.editor.x=256
-package.editor.y=258
+package.editor.x=221
+package.editor.y=290
 package.numDependencies=0
 package.numTargets=5
 package.showExtends=true
@@ -25,10 +25,10 @@ target3.type=PackageTarget
 target3.width=80
 target3.x=160
 target3.y=10
-target4.editor.height=700
+target4.editor.height=819
 target4.editor.width=900
-target4.editor.x=296
-target4.editor.y=120
+target4.editor.x=-3
+target4.editor.y=101
 target4.height=50
 target4.name=RPGGridTester
 target4.naviview.expanded=true

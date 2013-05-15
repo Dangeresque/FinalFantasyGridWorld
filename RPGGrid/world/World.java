@@ -62,6 +62,10 @@ public class World<T>
         addGridClass("RPGGrid.grid.UnboundedGrid");
     }
 
+    public JFrame getJFrame() {
+        return frame;
+    }
+
     /**
      * Constructs and shows a frame for this world.
      */
@@ -70,6 +74,7 @@ public class World<T>
         if (frame == null)
         {
             frame = new WorldFrame<T>(this);
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
             frame.setVisible(true);
         }
         else
@@ -135,7 +140,7 @@ public class World<T>
     {
         return false;
     }
-    
+
     /**
      * This method is called when a key was pressed. Override it if your world wants
      * to consume some keys (e.g. "1"-"9" for Sudoku). Don't consume plain arrow keys,
@@ -171,7 +176,7 @@ public class World<T>
                     Location loc = new Location(i, j);
                     if (gr.isValid(loc) && gr.get(loc) == null)
                         emptyLocs.add(loc);
-                }
+            }
             if (emptyLocs.size() == 0)
                 return null;
             int r = generator.nextInt(emptyLocs.size());
