@@ -82,6 +82,8 @@ public class WorldFrame<T> extends JFrame
     private ResourceBundle resources;
     private DisplayMap displayMap;
 
+    private PseudoInfiniteViewport pseudo;
+
     private Set<Class> gridClasses;
     private JMenu newGridMenu;
 
@@ -158,7 +160,8 @@ public class WorldFrame<T> extends JFrame
             });
 
         JScrollPane scrollPane = new JScrollPane();
-        scrollPane.setViewport(new PseudoInfiniteViewport(scrollPane));
+        pseudo = new PseudoInfiniteViewport(scrollPane);
+        scrollPane.setViewport(pseudo);
         scrollPane.setViewportView(display);
         content.add(scrollPane, BorderLayout.CENTER);
 
@@ -201,6 +204,11 @@ public class WorldFrame<T> extends JFrame
     public GridPanel getDisplay()
     {
         return display;
+    }
+
+    public PseudoInfiniteViewport getPseudo()
+    {
+        return pseudo;
     }
 
     public void repaint()

@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
+import java.awt.Point;
 
 import java.awt.Color;
 /**
@@ -35,5 +36,6 @@ public class RPGGridTester
         WorldFrame temp = (WorldFrame) world.getJFrame();
         temp.getDisplay().zoomIn();
         temp.getDisplay().zoomIn();
+        //temp.getPseudo().setViewPosition(new Point(3000, 3000));
     }
 }
