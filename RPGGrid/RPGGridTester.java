@@ -1,4 +1,4 @@
-package FinalFantasy;
+package RPGGrid;
 
 import RPGGrid.actor.*;
 import RPGGrid.grid.*;
