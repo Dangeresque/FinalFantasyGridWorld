@@ -31,12 +31,9 @@ public class RPGGridTester
         world.add(new Location(1, 5), new Flower(Color.RED));
         world.add(new Location(4, 4), new Critter());
         world.show();
-    }
 
-    /*
-    public void zoomRight() {
-        GridPanel.zoomIn();
-        GridPanel.zoomIn();
+        WorldFrame temp = (WorldFrame) world.getJFrame();
+        temp.getDisplay().zoomIn();
+        temp.getDisplay().zoomIn();
     }
-    */
 }

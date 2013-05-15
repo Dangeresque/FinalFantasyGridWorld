@@ -1,17 +1,13 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=615
-package.editor.y=181
+package.editor.x=316
+package.editor.y=318
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
 project.charset=windows-1252
-readme.editor.height=700
-readme.editor.width=900
-readme.editor.x=0
-readme.editor.y=22
 target1.height=62
 target1.name=RPGGrid
 target1.type=PackageTarget
