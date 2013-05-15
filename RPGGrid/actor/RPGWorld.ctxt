@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.params=
-comment0.target=ActorWorld()
+comment0.target=RPGWorld()
 comment0.text=\r\n\ Constructs\ an\ actor\ world\ with\ a\ default\ grid.\r\n
 comment1.params=grid
-comment1.target=ActorWorld(RPGGrid.grid.Grid)
+comment1.target=RPGWorld(RPGGrid.grid.Grid)
 comment1.text=\r\n\ Constructs\ an\ actor\ world\ with\ a\ given\ grid.\r\n\ @param\ grid\ the\ grid\ for\ this\ world.\r\n
 comment2.params=
 comment2.target=void\ show()

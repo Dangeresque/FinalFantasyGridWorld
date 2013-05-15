@@ -27,14 +27,14 @@ import java.util.ArrayList;
  * This class is not tested on the AP CS A and AB exams.
  */
 
-public class ActorWorld extends World<Actor>
+public class RPGWorld extends World<Actor>
 {    
     private static final String DEFAULT_MESSAGE = "Click on a grid location to construct or manipulate an actor.";
     
     /**
      * Constructs an actor world with a default grid.
      */
-    public ActorWorld()
+    public RPGWorld()
     {
     }
 
@@ -42,7 +42,7 @@ public class ActorWorld extends World<Actor>
      * Constructs an actor world with a given grid.
      * @param grid the grid for this world.
      */
-    public ActorWorld(Grid<Actor> grid)
+    public RPGWorld(Grid<Actor> grid)
     {
         super(grid);
     }
@@ -56,6 +56,7 @@ public class ActorWorld extends World<Actor>
 
     public void step()
     {
+        /*
         Grid<Actor> gr = getGrid();
         ArrayList<Actor> actors = new ArrayList<Actor>();
         for (Location loc : gr.getOccupiedLocations())
@@ -66,7 +67,7 @@ public class ActorWorld extends World<Actor>
             // only act if another actor hasn't removed a
             if (a.getGrid() == gr)
                 a.act();
-        }
+        } */
     }
 
     /**

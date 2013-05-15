@@ -30,10 +30,8 @@ public class RPGGridTester
         } catch (IOException e) {
         }
         // Divide image Height/ width to get grid world size
-        ActorWorld world = new ActorWorld(new BoundedGrid<Actor>(img.getHeight() / 16, img.getWidth() / 16 ));
-        world.add(new Location(3, 3), new Rock());
-        world.add(new Location(1, 5), new Flower(Color.RED));
-        world.add(new Location(4, 4), new Critter());
+        RPGWorld world = new RPGWorld(new BoundedGrid<Actor>(img.getHeight() / 16, img.getWidth() / 16 ));
+        world.add(new Location(4, 4), new Actor());
         world.show();
 
         WorldFrame temp = (WorldFrame) world.getJFrame();
