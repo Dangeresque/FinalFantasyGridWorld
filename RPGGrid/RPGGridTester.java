@@ -10,7 +10,6 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 import java.awt.Color;
-//commenttest
 /**
  * This class runs a world that contains critters. <br />
  * This class is not tested on the AP CS A and AB exams.
