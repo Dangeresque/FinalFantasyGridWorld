@@ -116,7 +116,7 @@ public class GridPanel extends JPanel implements Scrollable,
         
         try
         {
-            img = ImageIO.read(new File("IceCave.jpg"));
+            img = ImageIO.read(new File("currentMap.gif"));
         } catch (IOException e) {
         }
         g2.drawImage(img, insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1) + 1, 0, 0, img.getWidth(), img.getHeight(), null);
@@ -126,6 +126,12 @@ public class GridPanel extends JPanel implements Scrollable,
         drawOccupants(g2);
         drawCurrentLocation(g2);
     }
+    
+    /*public static GridPanel getGPanel()
+    {
+        return this;
+    }
+    */
 
     /**
      * Draw one occupant object. First verify that the object is actually
