@@ -1,0 +1,1 @@
+I wrote in the text doc -Konrad
