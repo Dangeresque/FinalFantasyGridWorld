@@ -5,7 +5,7 @@ import RPGGrid.grid.Location;
 
 import java.awt.Color;
 
-public interface ThePlayer
+public class ThePlayer extends Actor
 {
     //Actor standingOn = null;
     
