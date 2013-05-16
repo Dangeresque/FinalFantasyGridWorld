@@ -2,6 +2,7 @@ package FinalFantasy;
 
 import RPGGrid.grid.*;
 import RPGGrid.actor.*;
+import RPGGrid.input.*;
 import java.util.*;
 /**
  * The <code>Character</code> class represents a player character.
@@ -9,7 +10,7 @@ import java.util.*;
  * @author Shonee A. Freed-Doerr
  * @version 1.0.0
  */
-public class Character extends FFActor
+public class Character extends FFActor implements ThePlayer
 {
     // instance variables
     private String name;

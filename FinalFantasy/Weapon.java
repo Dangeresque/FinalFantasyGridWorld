@@ -1,5 +1,6 @@
 package FinalFantasy;
 
+import RPGGrid.actor.*;
 
 /**
  * The <code>Weapon</code> class represents weaponry.
@@ -26,5 +27,5 @@ public class Weapon implements Item {
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    
+
 }

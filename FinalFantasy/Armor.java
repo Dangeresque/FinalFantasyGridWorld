@@ -1,5 +1,7 @@
 package FinalFantasy;
 
+import RPGGrid.actor.*;
+
 /**
  * The <code>Armor</code> class is the framework for any form of armor.
  * 

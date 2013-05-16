@@ -1,5 +1,6 @@
-package FinalFantasy;
+package RPGGrid.input;
 
+import RPGGrid.input.*;
 /**
  * Tests the KeyReader.
  * 

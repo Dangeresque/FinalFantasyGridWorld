@@ -1,4 +1,4 @@
-package FinalFantasy;
+package RPGGrid.input;
 
 import java.io.*;
 /**
