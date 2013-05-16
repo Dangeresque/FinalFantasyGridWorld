@@ -50,7 +50,7 @@ public class GUIController<T>
 
     private static final int MIN_DELAY_MSECS = 10, MAX_DELAY_MSECS = 1000;
     private static final int INITIAL_DELAY = MIN_DELAY_MSECS
-            + (MAX_DELAY_MSECS - MIN_DELAY_MSECS) / 2;
+        + (MAX_DELAY_MSECS - MIN_DELAY_MSECS) / 2;
 
     private Timer timer;
     private JButton stepButton, runButton, stopButton;
@@ -72,7 +72,7 @@ public class GUIController<T>
      * @param res the resource bundle for message display
      */
     public GUIController(WorldFrame<T> parent, GridPanel disp,
-            DisplayMap displayMap, ResourceBundle res)
+    DisplayMap displayMap, ResourceBundle res)
     {
         resources = res;
         display = disp;
@@ -81,12 +81,12 @@ public class GUIController<T>
         makeControls();
 
         occupantClasses = new TreeSet<Class>(new Comparator<Class>()
-        {
-            public int compare(Class a, Class b)
             {
-                return a.getName().compareTo(b.getName());
-            }
-        });
+                public int compare(Class a, Class b)
+                {
+                    return a.getName().compareTo(b.getName());
+                }
+            });
 
         World<T> world = parentFrame.getWorld();
         Grid<T> gr = world.getGrid();
@@ -100,29 +100,29 @@ public class GUIController<T>
             catch (Exception ex)
             {
                 ex.printStackTrace();
-            }
+        }
 
         timer = new Timer(INITIAL_DELAY, new ActionListener()
-        {
-            public void actionPerformed(ActionEvent evt)
             {
-                step();
-            }
-        });
+                public void actionPerformed(ActionEvent evt)
+                {
+                    step();
+                }
+            });
 
         display.addMouseListener(new MouseAdapter()
-        {
-            public void mousePressed(MouseEvent evt)
             {
-                Grid<T> gr = parentFrame.getWorld().getGrid();
-                Location loc = display.locationForPoint(evt.getPoint());
-                if (loc != null && gr.isValid(loc) && !isRunning())
+                public void mousePressed(MouseEvent evt)
                 {
-                    display.setCurrentLocation(loc);
-                    locationClicked();
+                    Grid<T> gr = parentFrame.getWorld().getGrid();
+                    Location loc = display.locationForPoint(evt.getPoint());
+                    if (loc != null && gr.isValid(loc) && !isRunning())
+                    {
+                        display.setCurrentLocation(loc);
+                        locationClicked();
+                    }
                 }
-            }
-        });
+            });
         stop();
     }
 
@@ -200,25 +200,25 @@ public class GUIController<T>
         stepButton = new JButton(resources.getString("button.gui.step"));
         runButton = new JButton(resources.getString("button.gui.run"));
         stopButton = new JButton(resources.getString("button.gui.stop"));
-        
-        controlPanel.setLayout(new BoxLayout(controlPanel, BoxLayout.X_AXIS));
-        controlPanel.setBorder(BorderFactory.createEtchedBorder());
-        
-        Dimension spacer = new Dimension(5, stepButton.getPreferredSize().height + 10);
-        
-        controlPanel.add(Box.createRigidArea(spacer));
 
-        controlPanel.add(stepButton);
-        controlPanel.add(Box.createRigidArea(spacer));
-        controlPanel.add(runButton);
-        controlPanel.add(Box.createRigidArea(spacer));
-        controlPanel.add(stopButton);
+        //controlPanel.setLayout(new BoxLayout(controlPanel, BoxLayout.X_AXIS));
+        //controlPanel.setBorder(BorderFactory.createEtchedBorder());
+
+        Dimension spacer = new Dimension(5, stepButton.getPreferredSize().height + 10);
+
+        //controlPanel.add(Box.createRigidArea(spacer));
+
+        //controlPanel.add(stepButton);
+        //controlPanel.add(Box.createRigidArea(spacer));
+        //controlPanel.add(runButton);
+        //controlPanel.add(Box.createRigidArea(spacer));
+        //controlPanel.add(stopButton);
         runButton.setEnabled(false);
         stepButton.setEnabled(false);
         stopButton.setEnabled(false);
 
-        controlPanel.add(Box.createRigidArea(spacer));
-        controlPanel.add(new JLabel(resources.getString("slider.gui.slow")));
+        //controlPanel.add(Box.createRigidArea(spacer));
+        //controlPanel.add(new JLabel(resources.getString("slider.gui.slow")));
         JSlider speedSlider = new JSlider(MIN_DELAY_MSECS, MAX_DELAY_MSECS,
                 INITIAL_DELAY);
         speedSlider.setInverted(true);
@@ -234,40 +234,39 @@ public class GUIController<T>
             map.remove(KeyStroke.getKeyStroke("control PAGE_UP"));
             map.remove(KeyStroke.getKeyStroke("control PAGE_DOWN"));
             map = map.getParent();
-        }
-
-        controlPanel.add(speedSlider);
-        controlPanel.add(new JLabel(resources.getString("slider.gui.fast")));
-        controlPanel.add(Box.createRigidArea(new Dimension(5, 0)));
+        } 
+        //controlPanel.add(speedSlider);
+        // controlPanel.add(new JLabel(resources.getString("slider.gui.fast")));
+        //controlPanel.add(Box.createRigidArea(new Dimension(5, 0)));
 
         stepButton.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
             {
-                step();
-            }
-        });
+                public void actionPerformed(ActionEvent e)
+                {
+                    step();
+                }
+            });
         runButton.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
             {
-                run();
-            }
-        });
+                public void actionPerformed(ActionEvent e)
+                {
+                    run();
+                }
+            });
         stopButton.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
             {
-                stop();
-            }
-        });
+                public void actionPerformed(ActionEvent e)
+                {
+                    stop();
+                }
+            });
         speedSlider.addChangeListener(new ChangeListener()
-        {
-            public void stateChanged(ChangeEvent evt)
             {
-                timer.setDelay(((JSlider) evt.getSource()).getValue());
-            }
-        });
+                public void stateChanged(ChangeEvent evt)
+                {
+                    timer.setDelay(((JSlider) evt.getSource()).getValue());
+                }
+            });
     }
 
     /**

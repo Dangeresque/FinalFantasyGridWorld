@@ -1,8 +1,13 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
+<<<<<<< HEAD
 package.editor.x=707
 package.editor.y=162
+=======
+package.editor.x=381
+package.editor.y=192
+>>>>>>> origin/Sean-Test-Branch
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
