@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=
+comment0.target=FFActor()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ FFActor\r\n
+comment1.params=
+comment1.target=int\ getLevel()
+comment1.text=\r\n\ The\ accessor\ method\ for\ the\ <code>level</code>\ instance\ variable.\r\n\ \r\n\ @return\ \ \ \ \ the\ FFActor's\ level\r\n
+comment2.params=
+comment2.target=Armor\ getArmor()
+comment2.text=\r\n\ The\ accessor\ method\ for\ the\ <code>Armor</code>\ that\ the\ FFActor\ wears.\r\n\ \r\n\ @return\ \ \ \ \ the\ FFActor's\ armor\r\n
+comment3.params=
+comment3.target=Weapon\ getWeapon()
+comment3.text=\r\n\ The\ accessor\ method\ for\ the\ <code>Weapon</code>\ that\ the\ FFActor\ weilds.\r\n\ \r\n\ @return\ \ \ \ \ the\ FFActor's\ weapon\r\n
+comment4.params=
+comment4.target=void\ updateAttack()
+comment4.text=\r\n\ updates\ the\ FFActor's\ attack\ value.\r\n
+comment5.params=
+comment5.target=void\ updateDefense()
+comment5.text=\r\n\ updates\ the\ FFActor's\ defense\ value.\r\n
+comment6.params=arm
+comment6.target=void\ wear(Armor)
+comment6.text=\r\n\ Gives\ the\ character\ a\ suit\ of\ armor\r\n\ \r\n\ @param\ arm\ \ the\ Character's\ new\ suit\ of\ armor\r\n
+comment7.params=lvl
+comment7.target=void\ setLevel(byte)
+numComments=8
