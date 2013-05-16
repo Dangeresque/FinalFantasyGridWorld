@@ -12,8 +12,6 @@ import java.util.*;
 public abstract class FFActor extends Actor {
     // instance variables
     private byte level;
-    private Armor armor;
-    private Weapon weapon;
     private int attack;
     private int defense;
     private int attFact;

@@ -16,6 +16,9 @@ public class Character extends FFActor implements ThePlayer
     private String name;
     private KeyReader reader;
     private ArrayList<Item> inventory;
+    private Armor armor;
+    private Weapon weapon;
+    private ArrayList<Spell> spells;
 
     /**
      * Generic constructor for objects of class Character
