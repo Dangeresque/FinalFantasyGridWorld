@@ -36,7 +36,7 @@ public class RPGGridTester
 
         WorldFrame temp = (WorldFrame) world.getJFrame();
         temp.getDisplay().zoomIn();
-        temp.getDisplay().zoomIn();
+        //temp.getDisplay().zoomIn();
         /*temp.getPseudo().setViewPosition(new Point(500, 500));
         //temp.reshape(100, 100, 800, 600);
         // Scrollbar s = new Scrollbar();

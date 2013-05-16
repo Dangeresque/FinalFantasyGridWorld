@@ -204,7 +204,7 @@ public class GUIController<T>
         //controlPanel.setLayout(new BoxLayout(controlPanel, BoxLayout.X_AXIS));
         //controlPanel.setBorder(BorderFactory.createEtchedBorder());
 
-        Dimension spacer = new Dimension(5, stepButton.getPreferredSize().height + 10);
+        //Dimension spacer = new Dimension(5, stepButton.getPreferredSize().height + 10);
 
         //controlPanel.add(Box.createRigidArea(spacer));
 

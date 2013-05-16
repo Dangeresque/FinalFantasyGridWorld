@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class RPGWorld extends World<Actor>
 {    
-    private static final String DEFAULT_MESSAGE = "Click on a grid location to construct or manipulate an actor.";
+    //private static final String DEFAULT_MESSAGE = "Click on a grid location to construct or manipulate an actor.";
     
     /**
      * Constructs an actor world with a default grid.
@@ -49,8 +49,8 @@ public class RPGWorld extends World<Actor>
 
     public void show()
     {
-        if (getMessage() == null)
-            setMessage(DEFAULT_MESSAGE);
+        //if (getMessage() == null)
+        //    setMessage(DEFAULT_MESSAGE);
         super.show();
     }
 

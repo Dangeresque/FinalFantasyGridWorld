@@ -194,7 +194,7 @@ public class WorldFrame<T> extends JFrame
         messageArea.setEditable(false);
         messageArea.setFocusable(false);
         messageArea.setBackground(new Color(0xFAFAD2));
-        content.add(new JScrollPane(messageArea), BorderLayout.NORTH);
+        //content.add(new JScrollPane(messageArea), BorderLayout.NORTH);
 
         pack();
         repaint(); // to show message

@@ -10,11 +10,13 @@ import javax.imageio.ImageIO;
 public class RPGGrid //extends BoundedGrid
 {
     String level;
-    Location thePlayer;
+    Actor thePlayer;
     //public FFGrid(int rows, int cols, String levl, int start)
     //{
 
     //}
 
     //public Actor getThePlayer() {}
+    
+    //public void getThePlayer()
 }

@@ -26,7 +26,7 @@ import java.util.ArrayList;
  * rows and columns. <br />
  * The implementation of this class is testable on the AP CS AB exam.
  */
-public class BoundedGrid<E> extends AbstractGrid<E>
+public class RPGGrid<E> extends Boun<E>
 {
     private Object[][] occupantArray; // the array storing the grid elements
 
