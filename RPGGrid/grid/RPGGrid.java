@@ -1,35 +1,20 @@
 package RPGGrid.grid;
 
+import RPGGrid.grid.*;
+import RPGGrid.actor.*;
 
-/**
- * Write a description of class RPGGrid here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class RPGGrid
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+
+public class RPGGrid //extends BoundedGrid
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    String level;
+    Location thePlayer;
+    //public FFGrid(int rows, int cols, String levl, int start)
+    //{
 
-    /**
-     * Constructor for objects of class RPGGrid
-     */
-    public RPGGrid()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+    //}
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    //public Actor getThePlayer() {}
 }
