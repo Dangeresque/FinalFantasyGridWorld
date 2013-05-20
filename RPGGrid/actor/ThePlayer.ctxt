@@ -2,5 +2,7 @@
 comment0.params=i
 comment0.target=void\ getInput(char)
 comment1.params=
-comment1.target=void\ centerOnMe()
-numComments=2
+comment1.target=Actor\ getStandingOn()
+comment2.params=a
+comment2.target=void\ setStandingOn(Actor)
+numComments=3

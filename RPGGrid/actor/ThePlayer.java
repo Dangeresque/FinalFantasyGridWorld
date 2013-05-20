@@ -8,18 +8,20 @@ import java.awt.Color;
 
 public class ThePlayer extends Actor
 {
+    private Actor standingOn;
+    
     public void getInput(char i)
     {
         System.out.println("I got input");
     }
     
-    public void centerOnMe()
+    public Actor getStandingOn()
     {
-        //WorldFrame temp = (WorldFrame) world.getJFrame();
-       // temp.getDisplay();
+        return standingOn;
     }
-    //Actor standingOn = null;
-
-    // public 
-    //things that the player must have
+    
+    public void setStandingOn(Actor a)
+    {
+        standingOn = a;
+    }
 }

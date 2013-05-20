@@ -2,5 +2,5 @@ package RPGGrid.actor;
 
 public interface Interactive
 {
-    public void interact();
+    public void interact(ThePlayer p);
 }

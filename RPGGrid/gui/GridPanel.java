@@ -510,7 +510,7 @@ PseudoInfiniteViewport.Pannable
                 pt.x += dx;
                 pt.y += dy;
                 viewPort.setViewPosition(pt);                
-            } else {
+            } /* else {
                 if (dr < 0)
                 {
                     Point pt = viewPort.getViewPosition();
@@ -533,7 +533,7 @@ PseudoInfiniteViewport.Pannable
                     //pt.y -= 48;
                     viewPort.setViewPosition(pt);
                 }
-            }
+            } */
         }
 
         repaint();

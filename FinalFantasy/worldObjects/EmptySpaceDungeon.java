@@ -1,9 +1,15 @@
 package FinalFantasy.worldObjects;
 
 import RPGGrid.actor.*;
+import RPGGrid.grid.*;
 
-public class EmptySpaceDungeon extends Actor implements Interactive {
-    public void interact() {
-        getGrid().get.thePlayer.setLocation(getLocation())
+public class EmptySpaceDungeon extends WorldObject
+{
+    public void interact(ThePlayer p) {
+        Actor tempActor = p.getStandingOn();
+        Location tempLocation = p.getLocation();
+        p.moveTo(getLocation());
+        getGrid().put(tempLocation, tempActor);
+        p.setStandingOn(this);
     }
 }

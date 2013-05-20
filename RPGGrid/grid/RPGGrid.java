@@ -47,7 +47,7 @@ public class RPGGrid extends AbstractGrid<Actor>
         occupantArray = new Actor[rows][cols];
     }
 
-    public Actor getThePlayer()
+    public ThePlayer getThePlayer()
     {
         // Look at all grid locations.
         for (int r = 0; r < getNumRows(); r++)
@@ -56,7 +56,7 @@ public class RPGGrid extends AbstractGrid<Actor>
             {
                 Location loc = new Location(r, c);
                 if (get(loc) instanceof ThePlayer)
-                    return get(loc);
+                    return (ThePlayer) get(loc);
             }
         }
         return null;
