@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=grid
+comment0.target=RPGWorld(RPGGrid.grid.Grid)
+comment0.text=\r\n\ Constructs\ an\ actor\ world\ with\ a\ given\ grid.\r\n\ @param\ grid\ the\ grid\ for\ this\ world.\r\n
+comment1.params=
+comment1.target=void\ show()
+comment2.params=
+comment2.target=void\ step()
+comment3.params=loc\ occupant
+comment3.target=void\ add(RPGGrid.grid.Location,\ RPGGrid.actor.Actor)
+comment3.text=\r\n\ Adds\ an\ actor\ to\ this\ world\ at\ a\ given\ location.\r\n\ @param\ loc\ the\ location\ at\ which\ to\ add\ the\ actor\r\n\ @param\ occupant\ the\ actor\ to\ add\r\n
+comment4.params=occupant
+comment4.target=void\ add(RPGGrid.actor.Actor)
+comment4.text=\r\n\ Adds\ an\ occupant\ at\ a\ random\ empty\ location.\r\n\ @param\ occupant\ the\ occupant\ to\ add\r\n
+comment5.params=loc
+comment5.target=RPGGrid.actor.Actor\ remove(RPGGrid.grid.Location)
+comment5.text=\r\n\ Removes\ an\ actor\ from\ this\ world.\r\n\ @param\ loc\ the\ location\ from\ which\ to\ remove\ an\ actor\r\n\ @return\ the\ removed\ actor,\ or\ null\ if\ there\ was\ no\ actor\ at\ the\ given\r\n\ location.\r\n
+numComments=6

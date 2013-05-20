@@ -14,11 +14,14 @@
  * @author Cay Horstmann
  */
 
-package RPGGrid.actor;
+package RPGGrid.world;
 
 import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
 import RPGGrid.world.World;
+import RPGGrid.actor.*;
+
+import java.io.*;
 
 import java.util.ArrayList;
 
@@ -29,14 +32,7 @@ import java.util.ArrayList;
 
 public class RPGWorld extends World<Actor>
 {    
-    //private static final String DEFAULT_MESSAGE = "Click on a grid location to construct or manipulate an actor.";
-    
-    /**
-     * Constructs an actor world with a default grid.
-     */
-    public RPGWorld()
-    {
-    }
+    private InputStreamReader reader;
 
     /**
      * Constructs an actor world with a given grid.
@@ -49,25 +45,20 @@ public class RPGWorld extends World<Actor>
 
     public void show()
     {
-        //if (getMessage() == null)
-        //    setMessage(DEFAULT_MESSAGE);
         super.show();
     }
 
     public void step()
     {
-        /*
         Grid<Actor> gr = getGrid();
-        ArrayList<Actor> actors = new ArrayList<Actor>();
         for (Location loc : gr.getOccupiedLocations())
-            actors.add(gr.get(loc));
-
-        for (Actor a : actors)
         {
-            // only act if another actor hasn't removed a
-            if (a.getGrid() == gr)
-                a.act();
-        } */
+            Actor i = gr.get(loc);
+            if (gr.get(loc) instanceof ThePlayer)
+            {
+                //gr.get(loc).getInput(reader.read());
+            }
+        }
     }
 
     /**

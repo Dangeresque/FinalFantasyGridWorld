@@ -28,9 +28,9 @@ import RPGGrid.actor.*;
  * rows and columns. <br />
  * The implementation of this class is testable on the AP CS AB exam.
  */
-public class RPGGrid<E> extends AbstractGrid<E>
+public class RPGGrid extends AbstractGrid<Actor>
 {
-    private Object[][] occupantArray; // the array storing the grid elements
+    private Actor[][] occupantArray; // the array storing the grid elements
 
     /**
      * Constructs an empty bounded grid with the given dimensions.
@@ -44,7 +44,7 @@ public class RPGGrid<E> extends AbstractGrid<E>
             throw new IllegalArgumentException("rows <= 0");
         if (cols <= 0)
             throw new IllegalArgumentException("cols <= 0");
-        occupantArray = new Object[rows][cols];
+        occupantArray = new Actor[rows][cols];
     }
 
     public Actor getThePlayer()
@@ -107,7 +107,7 @@ public class RPGGrid<E> extends AbstractGrid<E>
         return occupantArray[loc.getRow()][loc.getCol()]; // unavoidable warning
     }
 
-    public E put(Location loc, E obj)
+    public Actor put(Location loc, Actor obj)
     {
         if (!isValid(loc))
             throw new IllegalArgumentException("Location " + loc
@@ -116,19 +116,19 @@ public class RPGGrid<E> extends AbstractGrid<E>
             throw new NullPointerException("obj == null");
 
         // Add the object to the grid.
-        E oldOccupant = get(loc);
+        Actor oldOccupant = get(loc);
         occupantArray[loc.getRow()][loc.getCol()] = obj;
         return oldOccupant;
     }
 
-    public E remove(Location loc)
+    public Actor remove(Location loc)
     {
         if (!isValid(loc))
             throw new IllegalArgumentException("Location " + loc
                 + " is not valid");
 
         // Remove the object from the grid.
-        E r = get(loc);
+        Actor r = get(loc);
         occupantArray[loc.getRow()][loc.getCol()] = null;
         return r;
     }

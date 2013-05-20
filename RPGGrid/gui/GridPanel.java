@@ -64,9 +64,9 @@ import javax.swing.ToolTipManager;
  */
 
 public class GridPanel extends JPanel implements Scrollable,
-        PseudoInfiniteViewport.Pannable
+PseudoInfiniteViewport.Pannable
 {
-    private static final int MIN_CELL_SIZE = 12;
+    private static final int MIN_CELL_SIZE = 48;
     private static final int DEFAULT_CELL_SIZE = 48;
     private static final int DEFAULT_CELL_COUNT = 10;
     private static final int TIP_DELAY = 1000;
@@ -82,7 +82,7 @@ public class GridPanel extends JPanel implements Scrollable,
     private Timer tipTimer;
     private JToolTip tip;
     private JPanel glassPane;
-    
+
     /**
      * Construct a new GridPanel object with no grid. The view will be
      * empty.
@@ -108,30 +108,23 @@ public class GridPanel extends JPanel implements Scrollable,
 
         Insets insets = getInsets();
         g2.setColor(backgroundColor); 
-        g2.fillRect(insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows
-                * (cellSize + 1) + 1);
-        
-        // Background image code
+        g2.fillRect(insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1) + 1);
+
         BufferedImage img = null;
-        
+
         try
         {
             img = ImageIO.read(new File("currentMap.gif"));
         } catch (IOException e) {
         }
-        g2.drawImage(img, insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1) + 1, 0, 0, img.getWidth(), img.getHeight(), null);
-        //End Image code
-        drawWatermark(g2);
+        g2.drawImage(img, insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1)
+            + 1, 0, 0, img.getWidth(), img.getHeight(), null);
+
+        //drawWatermark(g2);
         //drawGridlines(g2);
         drawOccupants(g2);
         drawCurrentLocation(g2);
     }
-    
-    /*public static GridPanel getGPanel()
-    {
-        return this;
-    }
-    */
 
     /**
      * Draw one occupant object. First verify that the object is actually
@@ -176,10 +169,10 @@ public class GridPanel extends JPanel implements Scrollable,
         int minx = Math.max(0, (curClip.x - left) / (cellSize + 1)) * (cellSize + 1) + left;
         int maxy = Math.min(numRows, 
                 (curClip.y + curClip.height - top + cellSize) / (cellSize + 1)) 
-                * (cellSize + 1) + top;
+            * (cellSize + 1) + top;
         int maxx = Math.min(numCols, 
                 (curClip.x + curClip.width - left + cellSize) / (cellSize + 1))
-                * (cellSize + 1) + left;
+            * (cellSize + 1) + left;
 
         g2.setColor(Color.GRAY);
         for (int y = miny; y <= maxy; y += cellSize + 1)
@@ -189,15 +182,15 @@ public class GridPanel extends JPanel implements Scrollable,
                         new Point(x + cellSize / 2, y + cellSize / 2));
                 if (loc != null && !grid.isValid(loc))
                     g2.fillRect(x + 1, y + 1, cellSize, cellSize);
-            }
+        }
 
         g2.setColor(Color.BLACK);
         for (int y = miny; y <= maxy; y += cellSize + 1)
-            // draw horizontal lines
+        // draw horizontal lines
             g2.drawLine(minx, y, maxx, y);
 
         for (int x = minx; x <= maxx; x += cellSize + 1)
-            // draw vertical lines
+        // draw vertical lines
             g2.drawLine(x, miny, x, maxy);
     }
 
@@ -211,7 +204,7 @@ public class GridPanel extends JPanel implements Scrollable,
         for (int index = 0; index < occupantLocs.size(); index++)
         {
             Location loc = (Location) occupantLocs.get(index);
-            
+
             int xleft = colToXCoord(loc.getCol());
             int ytop = rowToYCoord(loc.getRow());
             drawOccupant(g2, xleft, ytop, grid.get(loc));
@@ -230,7 +223,7 @@ public class GridPanel extends JPanel implements Scrollable,
         {
             Point p = pointForLocation(currentLocation);
             g2.drawRect(p.x - cellSize / 2 - 2, p.y - cellSize / 2 - 2,
-                    cellSize + 3, cellSize + 3);
+                cellSize + 3, cellSize + 3);
         }
     }
 
@@ -244,7 +237,7 @@ public class GridPanel extends JPanel implements Scrollable,
             return;
         g2 = (Graphics2D) g2.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
+            RenderingHints.VALUE_ANTIALIAS_ON);
         Rectangle rect = getBounds();
         g2.setPaint(new Color(0xE3, 0xD3, 0xD3));
         final int WATERMARK_FONT_SIZE = 100;
@@ -325,7 +318,7 @@ public class GridPanel extends JPanel implements Scrollable,
     public Dimension getPreferredSize()
     {
         return new Dimension(numCols * (cellSize + 1) + 1 + extraWidth(), 
-                numRows * (cellSize + 1) + 1 + extraHeight());
+            numRows * (cellSize + 1) + 1 + extraHeight());
     }
 
     /**
@@ -335,7 +328,7 @@ public class GridPanel extends JPanel implements Scrollable,
     public Dimension getMinimumSize()
     {
         return new Dimension(numCols * (MIN_CELL_SIZE + 1) + 1 + extraWidth(), 
-                numRows * (MIN_CELL_SIZE + 1) + 1 + extraHeight());
+            numRows * (MIN_CELL_SIZE + 1) + 1 + extraHeight());
     }
 
     /**
@@ -369,7 +362,7 @@ public class GridPanel extends JPanel implements Scrollable,
         if (vp != null)
         {
             if (!isPannableUnbounded()
-                    || !(vp instanceof PseudoInfiniteViewport))
+            || !(vp instanceof PseudoInfiniteViewport))
                 vp.setViewPosition(pointForLocation(loc));
             else
                 showPanTip();
@@ -392,7 +385,7 @@ public class GridPanel extends JPanel implements Scrollable,
     public Point pointForLocation(Location loc)
     {
         return new Point(colToXCoord(loc.getCol()) + cellSize / 2,
-                rowToYCoord(loc.getRow()) + cellSize / 2);
+            rowToYCoord(loc.getRow()) + cellSize / 2);
     }
 
     // private helpers to convert between (x,y) and (row,col)
@@ -438,11 +431,11 @@ public class GridPanel extends JPanel implements Scrollable,
         Object f = grid.get(loc);
         if (f != null)
             return MessageFormat.format(resources
-                    .getString("cell.tooltip.nonempty"), new Object[]
+                .getString("cell.tooltip.nonempty"), new Object[]
                 { loc, f });
         else
             return MessageFormat.format(resources
-                    .getString("cell.tooltip.empty"), new Object[]
+                .getString("cell.tooltip.empty"), new Object[]
                 { loc, f });
     }
 
@@ -516,12 +509,36 @@ public class GridPanel extends JPanel implements Scrollable,
                 Point pt = viewPort.getViewPosition();
                 pt.x += dx;
                 pt.y += dy;
-                viewPort.setViewPosition(pt);
+                viewPort.setViewPosition(pt);                
+            } else {
+                if (dr < 0)
+                {
+                    Point pt = viewPort.getViewPosition();
+                    //pt.x += 48;
+                    pt.y -= 48;
+                    viewPort.setViewPosition(pt);
+                } else if (dr > 0) {
+                    Point pt = viewPort.getViewPosition();
+                    //pt.x += 48;
+                    pt.y += 48;
+                    viewPort.setViewPosition(pt);
+                } else if (dc < 0) {
+                    Point pt = viewPort.getViewPosition();
+                    pt.x -= 48;
+                    //pt.y -= 48;
+                    viewPort.setViewPosition(pt);
+                } else {
+                    Point pt = viewPort.getViewPosition();
+                    pt.x += 48;
+                    //pt.y -= 48;
+                    viewPort.setViewPosition(pt);
+                }
             }
         }
+
         repaint();
-        showTip(getToolTipText(currentLocation),
-                pointForLocation(currentLocation));
+        //showTip(getToolTipText(currentLocation),
+        //        pointForLocation(currentLocation));
     }
 
     /**
@@ -541,12 +558,12 @@ public class GridPanel extends JPanel implements Scrollable,
             glassPane.setLayout(null); // will control layout manually
             glassPane.add(tip = new JToolTip());
             tipTimer = new Timer(TIP_DELAY, new ActionListener()
-            {
-                public void actionPerformed(ActionEvent evt)
                 {
-                    glassPane.setVisible(false);
-                }
-            });
+                    public void actionPerformed(ActionEvent evt)
+                    {
+                        glassPane.setVisible(false);
+                    }
+                });
             tipTimer.setRepeats(false);
         }
         if (tipText == null)
@@ -610,13 +627,13 @@ public class GridPanel extends JPanel implements Scrollable,
     // JScrollPane. The 5 methods below are the methods in that interface
 
     public int getScrollableUnitIncrement(Rectangle visibleRect,
-            int orientation, int direction)
+    int orientation, int direction)
     {
         return cellSize + 1;
     }
 
     public int getScrollableBlockIncrement(Rectangle visibleRect,
-            int orientation, int direction)
+    int orientation, int direction)
     {
         if (orientation == SwingConstants.VERTICAL)
             return (int) (visibleRect.height * .9);
@@ -637,7 +654,7 @@ public class GridPanel extends JPanel implements Scrollable,
     public Dimension getPreferredScrollableViewportSize()
     {
         return new Dimension(DEFAULT_CELL_COUNT * (DEFAULT_CELL_SIZE + 1) + 1 + extraWidth(), 
-                DEFAULT_CELL_COUNT * (DEFAULT_CELL_SIZE + 1) + 1 + extraHeight());
+            DEFAULT_CELL_COUNT * (DEFAULT_CELL_SIZE + 1) + 1 + extraHeight());
     }
 
     // GridPanel implements the PseudoInfiniteViewport.Pannable interface to
@@ -672,6 +689,6 @@ public class GridPanel extends JPanel implements Scrollable,
         if (loc != null)
             tipText = getToolTipText(loc);
 
-        showTip(tipText, getLocation());
+        //showTip(tipText, getLocation());
     }
 }

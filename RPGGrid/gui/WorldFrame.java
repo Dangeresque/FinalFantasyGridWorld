@@ -61,6 +61,7 @@ import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
+import javax.swing.ScrollPaneConstants;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -82,8 +83,6 @@ public class WorldFrame<T> extends JFrame
     private ResourceBundle resources;
     private DisplayMap displayMap;
 
-    private PseudoInfiniteViewport pseudo;
-
     private Set<Class> gridClasses;
     private JMenu newGridMenu;
 
@@ -98,12 +97,12 @@ public class WorldFrame<T> extends JFrame
         this.world = world;
         count++;
         resources = ResourceBundle
-        .getBundle(getClass().getName() + "Resources");
+                .getBundle(getClass().getName() + "Resources");
 
         try
         {
             System.setProperty("sun.awt.exception.handler",
-                GUIExceptionHandler.class.getName());
+                    GUIExceptionHandler.class.getName());
         }
         catch (SecurityException ex)
         {
@@ -111,67 +110,70 @@ public class WorldFrame<T> extends JFrame
         }
 
         addWindowListener(new WindowAdapter()
+        {
+            public void windowClosing(WindowEvent event)
             {
-                public void windowClosing(WindowEvent event)
-                {
-                    count--;
-                    if (count == 0)
-                        System.exit(0);
-                }
-            });
+                count--;
+                if (count == 0)
+                    System.exit(0);
+            }
+        });
 
         displayMap = new DisplayMap();
         String title = System.getProperty("info.gridworld.gui.frametitle");
         if (title == null) title = resources.getString("frame.title"); 
         setTitle(title);
-        setLocation(25, 15);
+        setLocation(25, 25);
 
         URL appIconUrl = getClass().getResource("GridWorld.gif");
         ImageIcon appIcon = new ImageIcon(appIconUrl);
         setIconImage(appIcon.getImage());
-
+        
         makeMenus();
 
         JPanel content = new JPanel();
-        content.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+        //content.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         content.setLayout(new BorderLayout());
         setContentPane(content);
 
         display = new GridPanel(displayMap, resources);
 
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new
-            KeyEventDispatcher() 
-            {
-                public boolean dispatchKeyEvent(KeyEvent event)
-                {
-                    if (getFocusOwner() == null) return false;
-                    String text = KeyStroke.getKeyStrokeForEvent(event).toString();
-                    final String PRESSED = "pressed ";                  
-                    int n = text.indexOf(PRESSED);
-                    if (n < 0) return false;
-                    // filter out modifier keys; they are neither characters or actions
-                    if (event.getKeyChar() == KeyEvent.CHAR_UNDEFINED && !event.isActionKey()) 
-                        return false;
-                    text = text.substring(0, n)  + text.substring(n + PRESSED.length());
-                    boolean consumed = getWorld().keyPressed(text, display.getCurrentLocation());
-                    if (consumed) repaint();
-                    return consumed;
-                }
-            });
-
+           KeyEventDispatcher() 
+           {
+               public boolean dispatchKeyEvent(KeyEvent event)
+               {
+                   if (getFocusOwner() == null) return false;
+                   String text = KeyStroke.getKeyStrokeForEvent(event).toString();
+                   final String PRESSED = "pressed ";                  
+                   int n = text.indexOf(PRESSED);
+                   if (n < 0) return false;
+                   // filter out modifier keys; they are neither characters or actions
+                   if (event.getKeyChar() == KeyEvent.CHAR_UNDEFINED && !event.isActionKey()) 
+                       return false;
+                   text = text.substring(0, n)  + text.substring(n + PRESSED.length());
+                   boolean consumed = getWorld().keyPressed(text, display.getCurrentLocation());
+                   if (consumed) repaint();
+                   return consumed;
+               }
+           });
+        
         JScrollPane scrollPane = new JScrollPane();
-        pseudo = new PseudoInfiniteViewport(scrollPane);
-        scrollPane.setViewport(pseudo);
+        scrollPane.setViewport(new PseudoInfiniteViewport(scrollPane));
+        scrollPane.setWheelScrollingEnabled(false);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setViewportView(display);
         content.add(scrollPane, BorderLayout.CENTER);
+        //content.add(scrollPane, BorderLayout.AFTER_LAST_LINE);
 
         gridClasses = new TreeSet<Class>(new Comparator<Class>()
+        {
+            public int compare(Class a, Class b)
             {
-                public int compare(Class a, Class b)
-                {
-                    return a.getName().compareTo(b.getName());
-                }
-            });
+                return a.getName().compareTo(b.getName());
+            }
+        });
         for (String name : world.getGridClasses())
             try
             {
@@ -180,7 +182,7 @@ public class WorldFrame<T> extends JFrame
             catch (Exception ex)
             {
                 ex.printStackTrace();
-        }
+            }
 
         Grid<T> gr = world.getGrid();
         gridClasses.add(gr.getClass());
@@ -199,16 +201,6 @@ public class WorldFrame<T> extends JFrame
         pack();
         repaint(); // to show message
         display.setGrid(gr);
-    }
-
-    public GridPanel getDisplay()
-    {
-        return display;
-    }
-
-    public PseudoInfiniteViewport getPseudo()
-    {
-        return pseudo;
     }
 
     public void repaint()
@@ -284,11 +276,11 @@ public class WorldFrame<T> extends JFrame
 
         String reason = resources.getString("error.reason");
         String message = text + "\n"
-            + MessageFormat.format(reason, new Object[]
-                { t });
+                + MessageFormat.format(reason, new Object[]
+                    { t });
 
         JOptionPane.showMessageDialog(this, message, title,
-            JOptionPane.ERROR_MESSAGE);
+                JOptionPane.ERROR_MESSAGE);
     }
 
     // Creates the drop-down menus on the frame.
@@ -308,7 +300,7 @@ public class WorldFrame<T> extends JFrame
     }
 
     private void configureMenuItem(JMenuItem item, String resource,
-    ActionListener listener)
+            ActionListener listener)
     {
         configureAbstractButton(item, resource);
         item.addActionListener(listener);
@@ -320,7 +312,7 @@ public class WorldFrame<T> extends JFrame
             {
                 int menuMask = getToolkit().getMenuShortcutKeyMask();
                 KeyStroke key = KeyStroke.getKeyStroke(KeyStroke.getKeyStroke(
-                            accel.substring(metaPrefix.length())).getKeyCode(),
+                        accel.substring(metaPrefix.length())).getKeyCode(),
                         menuMask);
                 item.setAccelerator(key);
             }
@@ -366,43 +358,43 @@ public class WorldFrame<T> extends JFrame
         menuItemsDisabledDuringRun.add(newGridMenu);
 
         menu.add(makeMenuItem("menu.file.quit", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        System.exit(0);
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                System.exit(0);
+            }
+        }));
 
         mbar.add(menu = makeMenu("menu.view"));
 
         menu.add(makeMenuItem("menu.view.up", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.moveLocation(-1, 0);
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.moveLocation(-1, 0);
+            }
+        }));
         menu.add(makeMenuItem("menu.view.down", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.moveLocation(1, 0);
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.moveLocation(1, 0);
+            }
+        }));
         menu.add(makeMenuItem("menu.view.left", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.moveLocation(0, -1);
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.moveLocation(0, -1);
+            }
+        }));
         menu.add(makeMenuItem("menu.view.right", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.moveLocation(0, 1);
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.moveLocation(0, 1);
+            }
+        }));
 
         JMenuItem viewEditMenu;
         menu.add(viewEditMenu = makeMenuItem("menu.view.edit",
@@ -427,46 +419,51 @@ public class WorldFrame<T> extends JFrame
         menuItemsDisabledDuringRun.add(viewDeleteMenu);
 
         menu.add(makeMenuItem("menu.view.zoomin", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.zoomIn();
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.zoomIn();
+            }
+        }));
 
         menu.add(makeMenuItem("menu.view.zoomout", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        display.zoomOut();
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                display.zoomOut();
+            }
+        }));
 
         mbar.add(menu = makeMenu("menu.help"));
         menu.add(makeMenuItem("menu.help.about", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        showAboutPanel();
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                showAboutPanel();
+            }
+        }));
         menu.add(makeMenuItem("menu.help.help", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        showHelp();
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                showHelp();
+            }
+        }));
         menu.add(makeMenuItem("menu.help.license", new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        showLicense();
-                    }
-                }));
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                showLicense();
+            }
+        }));
 
         setRunMenuItemsEnabled(true);
         setJMenuBar(mbar);
+    }
+    
+    public GridPanel getDisplay()
+    {
+        return display;
     }
 
     private void makeNewGridMenu()
@@ -494,7 +491,7 @@ public class WorldFrame<T> extends JFrame
     {
         String html = MessageFormat.format(resources
                 .getString("dialog.about.text"), new Object[]
-                { resources.getString("version.id") });
+            { resources.getString("version.id") });
         String[] props = { "java.version", "java.vendor", "java.home", "os.name", "os.arch", "os.version", "user.name", "user.home", "user.dir" };
         html += "<table border='1'>";
         for (String prop : props)
@@ -512,8 +509,8 @@ public class WorldFrame<T> extends JFrame
         html += "</table>";
         html = "<html>" + html + "</html>";
         JOptionPane.showMessageDialog(this, new JLabel(html), resources
-            .getString("dialog.about.title"),
-            JOptionPane.INFORMATION_MESSAGE);
+                .getString("dialog.about.title"),
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
     /**
@@ -537,19 +534,19 @@ public class WorldFrame<T> extends JFrame
         }
         helpText.setEditable(false);
         helpText.addHyperlinkListener(new HyperlinkListener()
+        {
+            public void hyperlinkUpdate(HyperlinkEvent ev)
             {
-                public void hyperlinkUpdate(HyperlinkEvent ev)
-                {
-                    if (ev.getEventType() == HyperlinkEvent.EventType.ACTIVATED)
-                        try
-                        {
-                            helpText.setPage(ev.getURL());
-                        }
-                        catch (Exception ex)
-                        {
+                if (ev.getEventType() == HyperlinkEvent.EventType.ACTIVATED)
+                    try
+                    {
+                        helpText.setPage(ev.getURL());
                     }
-                }
-            });
+                    catch (Exception ex)
+                    {
+                    }
+            }
+        });
         JScrollPane sp = new JScrollPane(helpText);
         sp.setPreferredSize(new Dimension(650, 500));
         dialog.getContentPane().add(sp);
@@ -605,7 +602,7 @@ public class WorldFrame<T> extends JFrame
             JOptionPane pane = new JOptionPane(new JScrollPane(area),
                     JOptionPane.ERROR_MESSAGE, JOptionPane.YES_NO_OPTION, null,
                     new String[]
-                    { copyOption, resources.getString("cancel") });
+                        { copyOption, resources.getString("cancel") });
             pane.createDialog(WorldFrame.this, e.toString()).setVisible(true);
             if (copyOption.equals(pane.getValue()))
             {

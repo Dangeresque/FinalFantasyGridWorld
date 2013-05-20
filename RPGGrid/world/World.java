@@ -16,7 +16,6 @@
 
 package RPGGrid.world;
 
-import RPGGrid.grid.BoundedGrid;
 import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
 import RPGGrid.gui.WorldFrame;
@@ -47,23 +46,17 @@ public class World<T>
     private static final int DEFAULT_ROWS = 10;
     private static final int DEFAULT_COLS = 10;
 
-    public World()
-    {
-        this(new BoundedGrid<T>(DEFAULT_ROWS, DEFAULT_COLS));
-        message = null;
-    }
-
     public World(Grid<T> g)
     {
         gr = g;
         gridClassNames = new TreeSet<String>();
         occupantClassNames = new TreeSet<String>();
-        addGridClass("RPGGrid.grid.BoundedGrid");
-        addGridClass("RPGGrid.grid.UnboundedGrid");
+        //addGridClass("RPGGrid.grid.BoundedGrid");
+        //addGridClass("RPGGrid.grid.RPGGrid");
     }
 
-    public JFrame getJFrame() {
-        return frame;
+    public WorldFrame getJFrame() {
+        return (WorldFrame) frame;
     }
 
     /**

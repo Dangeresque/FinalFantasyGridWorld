@@ -16,6 +16,7 @@
 
 package RPGGrid.grid;
 
+import RPGGrid.actor.*;
 import java.util.ArrayList;
 
 /**
@@ -31,6 +32,11 @@ public abstract class AbstractGrid<E> implements Grid<E>
         for (Location neighborLoc : getOccupiedAdjacentLocations(loc))
             neighbors.add(get(neighborLoc));
         return neighbors;
+    }
+    
+    public Actor getThePlayer()
+    {
+        return null;
     }
 
     public ArrayList<Location> getValidAdjacentLocations(Location loc)

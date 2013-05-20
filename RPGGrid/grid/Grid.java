@@ -19,6 +19,7 @@
 
 package RPGGrid.grid;
 
+import RPGGrid.actor.*;
 import java.util.ArrayList;
 
 /**
@@ -33,6 +34,8 @@ public interface Grid<E>
      * @return the number of rows, or -1 if this grid is unbounded
      */
     int getNumRows();
+
+    Actor getThePlayer();
 
     /**
      * Returns the number of columns in this grid.
