@@ -111,7 +111,7 @@ public class GUIController<T>
         });
 
         //comment out this when done testing
-        display.addMouseListener(new MouseAdapter()
+        /* display.addMouseListener(new MouseAdapter()
         {
             public void mousePressed(MouseEvent evt)
             {
@@ -123,7 +123,7 @@ public class GUIController<T>
                     locationClicked();
                 }
             }
-        });
+        });*/
         stop();
     }
 
@@ -178,7 +178,7 @@ public class GUIController<T>
     public void stop()
     {
         display.setToolTipsEnabled(true);
-        parentFrame.setRunMenuItemsEnabled(true);
+        parentFrame.setRunMenuItemsEnabled(false);
         timer.stop();
         stopButton.setEnabled(false);
         runButton.setEnabled(true);

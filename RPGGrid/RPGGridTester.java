@@ -4,6 +4,8 @@ import RPGGrid.actor.*;
 import RPGGrid.grid.*;
 import RPGGrid.gui.*;
 import RPGGrid.world.*;
+import RPGGrid.input.*;
+
 import FinalFantasy.worldObjects.*;
 
 import java.util.ArrayList;
@@ -112,6 +114,7 @@ public class RPGGridTester
         world.add(locs.get(142), new Obstacle());
         world.add(locs.get(143), new Obstacle());
         world.add(locs.get(144), new Obstacle());
+        world.add(locs.get(145), new Door());
         world.add(locs.get(146), new Obstacle());
         world.add(locs.get(147), new Obstacle());
         world.add(locs.get(148), new Obstacle());
@@ -238,6 +241,8 @@ public class RPGGridTester
         
         world.show();
         world.getJFrame().getDisplay().moveLocation(22, 21);
+        
+        RPGListner mover = new RPGListner(world);
     }
 
     //world.getJFrame().getDisplay().moveLocation(15, 15);

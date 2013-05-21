@@ -43,21 +43,6 @@ public class RPGWorld extends World<Actor>
     public RPGWorld(Grid<Actor> grid)
     {
         super(grid);
-
-        getJFrame().addKeyListener(new KeyAdapter() 
-            {
-                public void keyPressed(KeyEvent arg0)
-                {
-                    boolean[] keys = new boolean[KeyEvent.KEY_TYPED];
-                    keys[arg0.getKeyCode()] = true;
-
-                    if(keys[KeyEvent.VK_W])
-                    {
-                        getGrid().getThePlayer().up();
-                    }
-                    
-                }
-            });
     }
 
     public void show()

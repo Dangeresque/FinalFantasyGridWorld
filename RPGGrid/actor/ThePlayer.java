@@ -21,31 +21,6 @@ public class ThePlayer extends Actor
         world = w;
     }
 
-    public void keyPressed(KeyEvent arg0)
-    {
-        boolean[] keys = new boolean[KeyEvent.KEY_TYPED];
-        keys[arg0.getKeyCode()] = true;
-
-        if(keys[KeyEvent.VK_W])
-        {
-           up();
-        }
-        else if(keys[KeyEvent.VK_S])
-        {
-            down();
-        }
-        else if(keys[KeyEvent.VK_A])
-        {
-            left();
-        }
-        else if(keys[KeyEvent.VK_D])
-        {
-            right();
-        }
-
-        //repaint();
-    }
-
     public void up()
     {
         Location l = getLocation().getAdjacentLocation(Location.NORTH);

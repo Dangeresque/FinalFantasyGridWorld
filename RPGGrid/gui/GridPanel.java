@@ -128,7 +128,7 @@ PseudoInfiniteViewport.Pannable
         //drawWatermark(g2);
         //drawGridlines(g2);
         drawOccupants(g2);
-        drawCurrentLocation(g2);
+        //drawCurrentLocation(g2);
     }
 
     /**
