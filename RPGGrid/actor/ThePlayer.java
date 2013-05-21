@@ -3,25 +3,89 @@ package RPGGrid.actor;
 import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
 import RPGGrid.gui.*;
+import RPGGrid.world.*;
+
+import FinalFantasy.worldObjects.*;
 
 import java.awt.Color;
 
 public class ThePlayer extends Actor
 {
-    private Actor standingOn;
-    
-    public void getInput(char i)
+    public RPGWorld world;
+    public ThePlayer(RPGWorld w)
     {
-        System.out.println("I got input");
+        world = w;
     }
-    
-    public Actor getStandingOn()
+
+    public void up()
     {
-        return standingOn;
+        Location l = getLocation().getAdjacentLocation(Location.NORTH);
+        Location current = getLocation();
+        if (getGrid().get(l) instanceof Interactive)
+        {
+            WorldObject a = (WorldObject) getGrid().get(l);
+            a.interact(this);
+        }
+        if (getLocation() != current)
+        {
+            EmptySpaceDungeon e = new EmptySpaceDungeon();
+            e.putSelfInGrid(getGrid(), current);
+
+            world.getJFrame().getDisplay().moveLocation(-1, 0);
+        }
     }
-    
-    public void setStandingOn(Actor a)
+
+    public void down()
     {
-        standingOn = a;
+        Location l = getLocation().getAdjacentLocation(Location.SOUTH);
+        Location current = getLocation();
+        if (getGrid().get(l) instanceof Interactive)
+        {
+            WorldObject a = (WorldObject) getGrid().get(l);
+            a.interact(this);
+        }
+       if (getLocation() != current)
+        {
+            EmptySpaceDungeon e = new EmptySpaceDungeon();
+            e.putSelfInGrid(getGrid(), current);
+
+            world.getJFrame().getDisplay().moveLocation(1, 0);
+        }
+    }
+
+    public void left()
+    {
+        Location l = getLocation().getAdjacentLocation(Location.WEST);
+        Location current = getLocation();
+        if (getGrid().get(l) instanceof Interactive)
+        {
+            WorldObject a = (WorldObject) getGrid().get(l);
+            a.interact(this);
+        }
+        if (getLocation() != current)
+        {
+            EmptySpaceDungeon e = new EmptySpaceDungeon();
+            e.putSelfInGrid(getGrid(), current);
+
+            world.getJFrame().getDisplay().moveLocation(0, -1);
+        }
+    }
+
+    public void right()
+    {
+        Location l = getLocation().getAdjacentLocation(Location.EAST);
+        Location current = getLocation();
+        if (getGrid().get(l) instanceof Interactive)
+        {
+            WorldObject a = (WorldObject) getGrid().get(l);
+            a.interact(this);
+        }
+        if (getLocation() != current)
+        {
+            EmptySpaceDungeon e = new EmptySpaceDungeon();
+            e.putSelfInGrid(getGrid(), current);
+
+            world.getJFrame().getDisplay().moveLocation(0, 1);
+        }
     }
 }

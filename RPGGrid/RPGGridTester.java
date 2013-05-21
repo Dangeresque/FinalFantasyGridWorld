@@ -44,10 +44,16 @@ public class RPGGridTester
             for(int c = 0; c < g.getNumCols(); c++)
             {
                 locs.add(new Location(r, c));
+                world.add(new Location(r, c), new EmptySpaceDungeon());
             }
         }
         //Door, GridItem, Obstacle, EmptySpaceTown, Person, EmptySpaceDungeon
-        world.add(new Location(4, 4), new ThePlayer());
+        
+        
+        ThePlayer p = new ThePlayer(world);
+        world.add(new Location(22, 21), p);
+        
+        
         world.add(locs.get(0), new Obstacle());
         world.add(locs.get(1), new Obstacle());
         world.add(locs.get(2), new Obstacle());
@@ -106,10 +112,132 @@ public class RPGGridTester
         world.add(locs.get(142), new Obstacle());
         world.add(locs.get(143), new Obstacle());
         world.add(locs.get(144), new Obstacle());
-
-
-
+        world.add(locs.get(146), new Obstacle());
+        world.add(locs.get(147), new Obstacle());
+        world.add(locs.get(148), new Obstacle());
+        world.add(locs.get(149), new Obstacle());
+        world.add(locs.get(152), new Obstacle());
+        world.add(locs.get(156), new Obstacle());
+        world.add(locs.get(169), new Obstacle());
+        world.add(locs.get(171), new Obstacle());
+        world.add(locs.get(177), new Obstacle());
+        world.add(locs.get(181), new Obstacle());
+        world.add(locs.get(194), new Obstacle());
+        world.add(locs.get(196), new Obstacle());
+        world.add(locs.get(202), new Obstacle());
+        world.add(locs.get(206), new Obstacle());
+        world.add(locs.get(219), new Obstacle());
+        world.add(locs.get(221), new Obstacle());
+        world.add(locs.get(227), new Obstacle());
+        world.add(locs.get(231), new Obstacle());
+        world.add(locs.get(244), new Obstacle());
+        world.add(locs.get(246), new Obstacle());
+        world.add(locs.get(252), new Obstacle());
+        world.add(locs.get(256), new Obstacle());
+        world.add(locs.get(269), new Obstacle());
+        world.add(locs.get(271), new Obstacle());
+        world.add(locs.get(277), new Obstacle());
+        world.add(locs.get(281), new Obstacle());
+        world.add(locs.get(294), new Obstacle());
+        world.add(locs.get(296), new Obstacle());
+        world.add(locs.get(302), new Obstacle());
+        world.add(locs.get(306), new Obstacle());
+        world.add(locs.get(319), new Obstacle());
+        world.add(locs.get(321), new Obstacle());
+        world.add(locs.get(327), new Obstacle());
+        world.add(locs.get(331), new Obstacle());
+        world.add(locs.get(344), new Obstacle());
+        world.add(locs.get(346), new Obstacle());
+        world.add(locs.get(352), new Obstacle());
+        world.add(locs.get(356), new Obstacle());
+        world.add(locs.get(369), new Obstacle());
+        world.add(locs.get(371), new Obstacle());
+        world.add(locs.get(377), new Obstacle());
+        world.add(locs.get(381), new Obstacle());
+        world.add(locs.get(389), new Obstacle());
+        world.add(locs.get(390), new Obstacle());
+        world.add(locs.get(391), new Obstacle());
+        world.add(locs.get(392), new Obstacle());
+        world.add(locs.get(393), new Obstacle());
+        world.add(locs.get(394), new Obstacle());
+        world.add(locs.get(396), new Obstacle());
+        world.add(locs.get(402), new Obstacle());
+        world.add(locs.get(406), new Obstacle());
+        world.add(locs.get(413), new Obstacle());
+        world.add(locs.get(419), new Obstacle());
+        world.add(locs.get(421), new Obstacle());
+        world.add(locs.get(427), new Obstacle());
+        world.add(locs.get(431), new Obstacle());
+        world.add(locs.get(438), new Obstacle());
+        world.add(locs.get(444), new Obstacle());
+        world.add(locs.get(446), new Obstacle());
+        world.add(locs.get(452), new Obstacle());
+        world.add(locs.get(456), new Obstacle());
+        world.add(locs.get(463), new Obstacle());
+        world.add(locs.get(469), new Obstacle());
+        world.add(locs.get(471), new Obstacle());
+        world.add(locs.get(475), new Obstacle());
+        world.add(locs.get(476), new Obstacle());
+        world.add(locs.get(477), new Obstacle());
+        world.add(locs.get(481), new Obstacle());
+        world.add(locs.get(482), new Obstacle());
+        world.add(locs.get(483), new Obstacle());
+        world.add(locs.get(484), new Obstacle());
+        world.add(locs.get(485), new Obstacle());
+        world.add(locs.get(486), new Obstacle());
+        world.add(locs.get(487), new Obstacle());
+        world.add(locs.get(488), new Obstacle());
+        world.add(locs.get(494), new Obstacle());
+        world.add(locs.get(497), new Obstacle());
+        world.add(locs.get(498), new Obstacle());
+        world.add(locs.get(499), new Obstacle());
+        world.add(locs.get(500), new Obstacle());
+        world.add(locs.get(519), new Obstacle());
+        world.add(locs.get(524), new Obstacle());
+        world.add(locs.get(525), new Obstacle());
+        world.add(locs.get(531), new Obstacle());
+        world.add(locs.get(532), new Obstacle());
+        world.add(locs.get(533), new Obstacle());
+        world.add(locs.get(534), new Obstacle());
+        world.add(locs.get(535), new Obstacle());
+        world.add(locs.get(536), new Obstacle());
+        world.add(locs.get(537), new Obstacle());
+        world.add(locs.get(538), new Obstacle());
+        world.add(locs.get(539), new Obstacle());
+        world.add(locs.get(540), new Obstacle());
+        world.add(locs.get(541), new Obstacle());
+        world.add(locs.get(542), new Obstacle());
+        world.add(locs.get(543), new Obstacle());
+        world.add(locs.get(544), new Obstacle());
+        world.add(locs.get(549), new Obstacle());
+        world.add(locs.get(550), new Obstacle());
+        world.add(locs.get(551), new GridItem());
+        world.add(locs.get(552), new GridItem());
+        world.add(locs.get(553), new GridItem());
+        world.add(locs.get(554), new GridItem());
+        world.add(locs.get(556), new Obstacle());
+        world.add(locs.get(569), new Obstacle());
+        world.add(locs.get(572), new Door());
+        world.add(locs.get(574), new Obstacle());
+        world.add(locs.get(575), new Obstacle());
+        world.add(locs.get(581), new Obstacle());
+        world.add(locs.get(594), new Obstacle());
+        world.add(locs.get(599), new Obstacle());
+        world.add(locs.get(600), new Obstacle());
+        world.add(locs.get(601), new Obstacle());
+        world.add(locs.get(602), new Obstacle());
+        world.add(locs.get(603), new Obstacle());
+        world.add(locs.get(604), new Obstacle());
+        world.add(locs.get(605), new Obstacle());
+        world.add(locs.get(619), new Obstacle());
+        world.add(locs.get(620), new Obstacle());
+        world.add(locs.get(621), new Obstacle());
+        world.add(locs.get(622), new Obstacle());
+        world.add(locs.get(623), new Obstacle());
+        world.add(locs.get(624), new Obstacle());
+        
         world.show();
+        world.getJFrame().getDisplay().moveLocation(22, 21);
     }
 
     //world.getJFrame().getDisplay().moveLocation(15, 15);

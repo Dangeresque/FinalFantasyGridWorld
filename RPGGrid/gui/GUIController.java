@@ -110,6 +110,7 @@ public class GUIController<T>
             }
         });
 
+        //comment out this when done testing
         display.addMouseListener(new MouseAdapter()
         {
             public void mousePressed(MouseEvent evt)

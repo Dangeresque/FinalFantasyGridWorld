@@ -46,6 +46,9 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
+import javax.swing.KeyStroke;
+import javax.swing.Action;
+
 import javax.swing.JPanel;
 import javax.swing.JToolTip;
 import javax.swing.JViewport;
@@ -92,6 +95,8 @@ PseudoInfiniteViewport.Pannable
         displayMap = map;
         resources = res;
         setToolTipsEnabled(false);
+        
+        getInputMap().put(KeyStroke.getKeyStroke("w"), "doSomething");
     }
 
     /**
@@ -511,28 +516,28 @@ PseudoInfiniteViewport.Pannable
                 pt.y += dy;
                 viewPort.setViewPosition(pt);                
             } /* else {
-                if (dr < 0)
-                {
-                    Point pt = viewPort.getViewPosition();
-                    //pt.x += 48;
-                    pt.y -= 48;
-                    viewPort.setViewPosition(pt);
-                } else if (dr > 0) {
-                    Point pt = viewPort.getViewPosition();
-                    //pt.x += 48;
-                    pt.y += 48;
-                    viewPort.setViewPosition(pt);
-                } else if (dc < 0) {
-                    Point pt = viewPort.getViewPosition();
-                    pt.x -= 48;
-                    //pt.y -= 48;
-                    viewPort.setViewPosition(pt);
-                } else {
-                    Point pt = viewPort.getViewPosition();
-                    pt.x += 48;
-                    //pt.y -= 48;
-                    viewPort.setViewPosition(pt);
-                }
+            if (dr < 0)
+            {
+            Point pt = viewPort.getViewPosition();
+            //pt.x += 48;
+            pt.y -= 48;
+            viewPort.setViewPosition(pt);
+            } else if (dr > 0) {
+            Point pt = viewPort.getViewPosition();
+            //pt.x += 48;
+            pt.y += 48;
+            viewPort.setViewPosition(pt);
+            } else if (dc < 0) {
+            Point pt = viewPort.getViewPosition();
+            pt.x -= 48;
+            //pt.y -= 48;
+            viewPort.setViewPosition(pt);
+            } else {
+            Point pt = viewPort.getViewPosition();
+            pt.x += 48;
+            //pt.y -= 48;
+            viewPort.setViewPosition(pt);
+            }
             } */
         }
 

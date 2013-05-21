@@ -31,9 +31,7 @@ import java.util.ArrayList;
  */
 
 public class RPGWorld extends World<Actor>
-{    
-    private InputStreamReader reader;
-
+{      
     /**
      * Constructs an actor world with a given grid.
      * @param grid the grid for this world.
