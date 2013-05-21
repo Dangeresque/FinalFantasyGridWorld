@@ -10,7 +10,7 @@ public class Door extends WorldObject {
         {
         System.out.println("Thou needidst a key");
         } else { */
-        System.out.println("Thou usist thine key");
+        System.out.println("Thou use-ith thine key to open ye door.");
         p.moveTo(getLocation());
     }
 }

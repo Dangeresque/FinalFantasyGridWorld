@@ -1,3 +1,7 @@
+/*
+ * The constructor and MIN_CELL_SIZE variable are all that has been changed from grid world.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2002-2006 College Entrance Examination Board 
@@ -95,8 +99,6 @@ PseudoInfiniteViewport.Pannable
         displayMap = map;
         resources = res;
         setToolTipsEnabled(false);
-        
-        getInputMap().put(KeyStroke.getKeyStroke("w"), "doSomething");
     }
 
     /**
@@ -515,35 +517,10 @@ PseudoInfiniteViewport.Pannable
                 pt.x += dx;
                 pt.y += dy;
                 viewPort.setViewPosition(pt);                
-            } /* else {
-            if (dr < 0)
-            {
-            Point pt = viewPort.getViewPosition();
-            //pt.x += 48;
-            pt.y -= 48;
-            viewPort.setViewPosition(pt);
-            } else if (dr > 0) {
-            Point pt = viewPort.getViewPosition();
-            //pt.x += 48;
-            pt.y += 48;
-            viewPort.setViewPosition(pt);
-            } else if (dc < 0) {
-            Point pt = viewPort.getViewPosition();
-            pt.x -= 48;
-            //pt.y -= 48;
-            viewPort.setViewPosition(pt);
-            } else {
-            Point pt = viewPort.getViewPosition();
-            pt.x += 48;
-            //pt.y -= 48;
-            viewPort.setViewPosition(pt);
             }
-            } */
         }
 
         repaint();
-        //showTip(getToolTipText(currentLocation),
-        //        pointForLocation(currentLocation));
     }
 
     /**

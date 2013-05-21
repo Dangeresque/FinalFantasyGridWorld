@@ -1,4 +1,4 @@
-package RPGGrid;
+ 
 
 import RPGGrid.actor.*;
 import RPGGrid.grid.*;
@@ -15,7 +15,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
-public class RPGGridTester
+public class CastleOfOrdeal3F
 {
     RPGWorld world;
     public static void main(String[] args)

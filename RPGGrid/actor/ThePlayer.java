@@ -1,23 +1,16 @@
 package RPGGrid.actor;
 
-import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
-import RPGGrid.gui.*;
 import RPGGrid.world.*;
 
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
 import FinalFantasy.worldObjects.*;
-
-import java.awt.Color;
 
 public class ThePlayer extends Actor
 {
     public RPGWorld world;
     public ThePlayer(RPGWorld w)
     {
+        setColor(null);
         world = w;
     }
 

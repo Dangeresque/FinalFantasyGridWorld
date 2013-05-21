@@ -6,10 +6,6 @@ import RPGGrid.grid.*;
 public class EmptySpaceTown extends WorldObject {
     public void interact(ThePlayer p)
     {
-        Actor tempActor = p.getStandingOn();
-        Location tempLocation = p.getLocation();
         p.moveTo(getLocation());
-        getGrid().put(tempLocation, tempActor);
-        p.setStandingOn(this);
     }
 }

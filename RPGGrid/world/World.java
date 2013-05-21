@@ -1,3 +1,7 @@
+/*
+ * getJFrame() is all that has been added from gridworld.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)

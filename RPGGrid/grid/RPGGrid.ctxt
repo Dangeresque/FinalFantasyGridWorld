@@ -1,21 +1,6 @@
 #BlueJ class context
 comment0.params=rows\ cols
 comment0.target=RPGGrid(int,\ int)
-comment0.text=\r\n\ Constructs\ an\ empty\ bounded\ grid\ with\ the\ given\ dimensions.\r\n\ (Precondition\:\ <code>rows\ >\ 0</code>\ and\ <code>cols\ >\ 0</code>.)\r\n\ @param\ rows\ number\ of\ rows\ in\ BoundedGrid\r\n\ @param\ cols\ number\ of\ columns\ in\ BoundedGrid\r\n
 comment1.params=
 comment1.target=RPGGrid.actor.ThePlayer\ getThePlayer()
-comment2.params=
-comment2.target=int\ getNumRows()
-comment3.params=
-comment3.target=int\ getNumCols()
-comment4.params=loc
-comment4.target=boolean\ isValid(Location)
-comment5.params=
-comment5.target=java.util.ArrayList\ getOccupiedLocations()
-comment6.params=loc
-comment6.target=RPGGrid.actor.Actor\ get(Location)
-comment7.params=loc\ obj
-comment7.target=RPGGrid.actor.Actor\ put(Location,\ RPGGrid.actor.Actor)
-comment8.params=loc
-comment8.target=RPGGrid.actor.Actor\ remove(Location)
-numComments=9
+numComments=2

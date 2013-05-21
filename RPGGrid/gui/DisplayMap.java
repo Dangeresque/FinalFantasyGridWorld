@@ -1,3 +1,7 @@
+/*
+ * This class is unchanged from grid world.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2002-2006 College Entrance Examination Board 

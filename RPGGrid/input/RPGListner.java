@@ -2,26 +2,18 @@ package RPGGrid.input;
 
 import RPGGrid.world.*;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Timer;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class RPGListner
 {
     RPGWorld world;
-
     public RPGListner(RPGWorld w)
     {
         world = w;
         world.getJFrame().addKeyListener(new KeyAdapter() 
             {
-
                 public void keyPressed(KeyEvent arg0)
                 {
                     boolean[] keys = new boolean[KeyEvent.KEY_TYPED];
@@ -43,9 +35,6 @@ public class RPGListner
                     {
                         world.getGrid().getThePlayer().right();
                     }
-                    //world.setFocusable(true);
-                    world.step();
-
                 }
             });
     }

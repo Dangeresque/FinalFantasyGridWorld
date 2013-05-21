@@ -1,3 +1,7 @@
+/*
+ * The constructor and makeMenus() method are the only methods modified from gridworld.  The getDisplay() class is new.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2002-2006 College Entrance Examination Board 

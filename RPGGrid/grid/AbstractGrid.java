@@ -1,3 +1,7 @@
+/*
+ * This is identicle to AbstractGrid in grid world, save for the fact that getJFrame() has been added.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)
@@ -33,11 +37,6 @@ public abstract class AbstractGrid<E> implements Grid<E>
             neighbors.add(get(neighborLoc));
         return neighbors;
     }
-    
-    public ThePlayer getThePlayer()
-    {
-        return null;
-    }
 
     public ArrayList<Location> getValidAdjacentLocations(Location loc)
     {
@@ -52,6 +51,11 @@ public abstract class AbstractGrid<E> implements Grid<E>
             d = d + Location.HALF_RIGHT;
         }
         return locs;
+    }
+
+    public ThePlayer getThePlayer()
+    {
+        return null;
     }
 
     public ArrayList<Location> getEmptyAdjacentLocations(Location loc)
@@ -82,15 +86,15 @@ public abstract class AbstractGrid<E> implements Grid<E>
      * necessarily in any particular order), in the format {loc=obj, loc=obj,
      * ...}
      */
-        public String toString()
+    public String toString()
+    {
+        String s = "{";
+        for (Location loc : getOccupiedLocations())
         {
-            String s = "{";
-            for (Location loc : getOccupiedLocations())
-            {
-                if (s.length() > 1)
-                    s += ", ";
-                s += loc + "=" + get(loc);
-            }
-            return s + "}";
+            if (s.length() > 1)
+                s += ", ";
+            s += loc + "=" + get(loc);
         }
+        return s + "}";
+    }
 }

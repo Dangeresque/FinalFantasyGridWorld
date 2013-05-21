@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=loc
 comment0.target=java.util.ArrayList\ getNeighbors(Location)
-comment1.params=
-comment1.target=RPGGrid.actor.ThePlayer\ getThePlayer()
-comment2.params=loc
-comment2.target=java.util.ArrayList\ getValidAdjacentLocations(Location)
+comment1.params=loc
+comment1.target=java.util.ArrayList\ getValidAdjacentLocations(Location)
+comment2.params=
+comment2.target=RPGGrid.actor.ThePlayer\ getThePlayer()
 comment3.params=loc
 comment3.target=java.util.ArrayList\ getEmptyAdjacentLocations(Location)
 comment4.params=loc

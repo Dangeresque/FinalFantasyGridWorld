@@ -1,3 +1,7 @@
+/*
+ * The constructor and makeControls() methods are all that has been changed from grid world.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2002-2006 College Entrance Examination Board 
@@ -177,7 +181,7 @@ public class GUIController<T>
      */
     public void stop()
     {
-        display.setToolTipsEnabled(true);
+        display.setToolTipsEnabled(false);
         parentFrame.setRunMenuItemsEnabled(false);
         timer.stop();
         stopButton.setEnabled(false);

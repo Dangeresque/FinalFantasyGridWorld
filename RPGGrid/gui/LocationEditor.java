@@ -1,3 +1,7 @@
+/*
+ * This class is unchanged from grid world.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)

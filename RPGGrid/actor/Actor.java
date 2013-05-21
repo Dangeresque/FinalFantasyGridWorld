@@ -1,3 +1,7 @@
+/*
+ * This class is unchanged from gridworld.
+ */
+
 /* 
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)
@@ -38,7 +42,7 @@ public class Actor
      */
     public Actor()
     {
-        color = null;
+        color = Color.BLUE;
         direction = Location.NORTH;
         grid = null;
         location = null;
