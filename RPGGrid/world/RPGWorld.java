@@ -21,6 +21,10 @@ import RPGGrid.grid.Location;
 import RPGGrid.world.World;
 import RPGGrid.actor.*;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import java.io.*;
 
 import java.util.ArrayList;
@@ -39,6 +43,21 @@ public class RPGWorld extends World<Actor>
     public RPGWorld(Grid<Actor> grid)
     {
         super(grid);
+
+        getJFrame().addKeyListener(new KeyAdapter() 
+            {
+                public void keyPressed(KeyEvent arg0)
+                {
+                    boolean[] keys = new boolean[KeyEvent.KEY_TYPED];
+                    keys[arg0.getKeyCode()] = true;
+
+                    if(keys[KeyEvent.VK_W])
+                    {
+                        getGrid().getThePlayer().up();
+                    }
+                    
+                }
+            });
     }
 
     public void show()

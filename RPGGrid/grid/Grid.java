@@ -35,7 +35,7 @@ public interface Grid<E>
      */
     int getNumRows();
 
-    Actor getThePlayer();
+    ThePlayer getThePlayer();
 
     /**
      * Returns the number of columns in this grid.

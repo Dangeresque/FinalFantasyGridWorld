@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.params=w
 comment0.target=ThePlayer(RPGGrid.world.RPGWorld)
-comment1.params=
-comment1.target=void\ up()
+comment1.params=arg0
+comment1.target=void\ keyPressed(java.awt.event.KeyEvent)
 comment2.params=
-comment2.target=void\ down()
+comment2.target=void\ up()
 comment3.params=
-comment3.target=void\ left()
+comment3.target=void\ down()
 comment4.params=
-comment4.target=void\ right()
-numComments=5
+comment4.target=void\ left()
+comment5.params=
+comment5.target=void\ right()
+numComments=6

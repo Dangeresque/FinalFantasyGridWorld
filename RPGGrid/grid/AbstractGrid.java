@@ -34,7 +34,7 @@ public abstract class AbstractGrid<E> implements Grid<E>
         return neighbors;
     }
     
-    public Actor getThePlayer()
+    public ThePlayer getThePlayer()
     {
         return null;
     }

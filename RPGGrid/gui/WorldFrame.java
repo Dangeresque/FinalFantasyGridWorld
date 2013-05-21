@@ -44,6 +44,10 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.TreeSet;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -199,6 +203,7 @@ public class WorldFrame<T> extends JFrame
         //content.add(new JScrollPane(messageArea), BorderLayout.NORTH);
 
         pack();
+
         repaint(); // to show message
         display.setGrid(gr);
     }
