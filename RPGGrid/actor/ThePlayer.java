@@ -29,6 +29,7 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(-1, 0);
+            world.add(getLocation(), new ThePlayer(world));
         }
     }
 
@@ -47,6 +48,7 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(1, 0);
+            world.add(getLocation(), new ThePlayerDown(world));
         }
     }
 
@@ -65,6 +67,7 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(0, -1);
+            world.add(getLocation(), new ThePlayerLeft(world));
         }
     }
 
@@ -83,6 +86,31 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(0, 1);
+            world.add(getLocation(), new ThePlayerRight(world));
         }
+    }
+}
+
+class ThePlayerDown extends ThePlayer
+{
+    public ThePlayerDown(RPGWorld w)
+    {
+        super(w);
+    }
+}
+
+class ThePlayerLeft extends ThePlayer
+{
+    public ThePlayerLeft(RPGWorld w)
+    {
+        super(w);
+    }
+}
+
+class ThePlayerRight extends ThePlayer
+{
+    public ThePlayerRight(RPGWorld w)
+    {
+        super(w);
     }
 }
