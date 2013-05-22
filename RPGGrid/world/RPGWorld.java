@@ -6,6 +6,7 @@ package RPGGrid.world;
 import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
 import RPGGrid.actor.*;
+import RPGGrid.input.*;
 
 /**
  * A <code>RPGWorld<code> provides a better way to add actors than World,
@@ -14,14 +15,22 @@ import RPGGrid.actor.*;
  */
 public class RPGWorld extends World<Actor>
 {      
-
+    SoundPlayer s;
+    
     /**
      * Constructs a RPGWorld with a given grid.
      * @param grid the grid which the RPGWorld will contain
      */
-    public RPGWorld(Grid<Actor> grid)
+    public RPGWorld(Grid<Actor> grid, SoundPlayer sound)
     {
         super(grid);
+        
+        s = sound;
+    }
+    
+    public SoundPlayer getSoundPlayer()
+    {
+        return s;
     }
 
     /**

@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.params=grid
-comment0.target=RPGWorld(RPGGrid.grid.Grid)
+comment0.params=grid\ sound
+comment0.target=RPGWorld(RPGGrid.grid.Grid,\ RPGGrid.input.SoundPlayer)
 comment0.text=\r\n\ Constructs\ a\ RPGWorld\ with\ a\ given\ grid.\r\n\ @param\ grid\ the\ grid\ which\ the\ RPGWorld\ will\ contain\r\n
-comment1.params=loc\ occupant
-comment1.target=void\ add(RPGGrid.grid.Location,\ RPGGrid.actor.Actor)
-comment1.text=\r\n\ Adds\ an\ actor\ to\ the\ grid\ at\ a\ given\ location.\r\n\ @param\ loc\:\ the\ location\ to\ add\ the\ actor\ to\r\n\ @param\ occupant\:\ the\ Actor\ to\ add\ to\ the\ grid\r\n
-numComments=2
+comment1.params=
+comment1.target=RPGGrid.input.SoundPlayer\ getSoundPlayer()
+comment2.params=loc\ occupant
+comment2.target=void\ add(RPGGrid.grid.Location,\ RPGGrid.actor.Actor)
+comment2.text=\r\n\ Adds\ an\ actor\ to\ the\ grid\ at\ a\ given\ location.\r\n\ @param\ loc\:\ the\ location\ to\ add\ the\ actor\ to\r\n\ @param\ occupant\:\ the\ Actor\ to\ add\ to\ the\ grid\r\n
+numComments=3

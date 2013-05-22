@@ -16,9 +16,14 @@ import java.io.IOException;
 
 public class CastleOfOrdeal3F
 {
-    RPGWorld world;
+    private RPGWorld world;
+    private static File f;
+    
     public static void main(String[] args)
     {
+        f = new File("dungeon.wav");
+        SoundPlayer s = new SoundPlayer(f);
+        
         BufferedImage img = null;
 
         try
@@ -26,7 +31,7 @@ public class CastleOfOrdeal3F
             img = ImageIO.read(new File("currentMap.gif"));
         } catch (IOException e) {}
         // Divide image Height/ width by 16 to get grid size
-        RPGWorld world = new RPGWorld(new RPGGrid(img.getHeight() / 16, img.getWidth() / 16 ));
+        RPGWorld world = new RPGWorld(new RPGGrid(img.getHeight() / 16, img.getWidth() / 16 ), s);
 
         ArrayList<Location> locs = new ArrayList<Location>();
         Grid g = world.getGrid();
@@ -233,6 +238,6 @@ public class CastleOfOrdeal3F
         RPGListner mover = new RPGListner(world);
         world.getJFrame().getDisplay().moveLocation(playerLoc.getRow(), playerLoc.getCol());
         
-        SoundPlayer.play("dungeon");
+        s.play();
     }
 }

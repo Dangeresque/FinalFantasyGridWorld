@@ -8,17 +8,25 @@ import java.io.*;
  */
 public class SoundPlayer
 {
-    private static Clip clip;
-    private static File f;
+    private Clip clip;
+    private File f;
+    
+    public SoundPlayer(File file)
+    {
+        f = file;
+    }
+    
+    public void setFile(File file)
+    {
+        f = file;
+    }
     
     /**
      * Plays a .wav file.
      * @param filename is the name of a .wav file in the projects root directory
      */
-    public static void play(String filename)
+    public void play()
     {
-        filename = filename + ".wav";
-        f = new File(filename);
         try
         {
             clip = AudioSystem.getClip();
@@ -34,7 +42,7 @@ public class SoundPlayer
     /**
      * Stops all sounds currently playing.  Sets f equal to null to avoid out of memeory errors.
      */
-    public static void pause()
+    public void pause()
     {
         clip.stop();
         f = null;

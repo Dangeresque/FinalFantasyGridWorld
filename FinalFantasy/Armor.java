@@ -8,7 +8,7 @@ package FinalFantasy;
  */
 public class Armor implements Item {
     // instance variables
-    private int strength;
+    private Integer strength;
 
     /**
      * Constructor for objects of class <code>Armor</code>; <br>

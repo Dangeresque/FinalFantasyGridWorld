@@ -34,6 +34,11 @@ public class ThePlayer extends Actor
     {
         return character;
     }
+    
+    public RPGWorld getWorld()
+    {
+        return world;
+    }
 
     /**
      * Causes the player to interact with the WorldObject above it,

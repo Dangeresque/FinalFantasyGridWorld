@@ -1,8 +1,12 @@
 #BlueJ class context
-comment0.params=filename
-comment0.target=void\ play(java.lang.String)
-comment0.text=\r\n\ Plays\ a\ .wav\ file.\r\n\ @param\ filename\ is\ the\ name\ of\ a\ .wav\ file\ in\ the\ projects\ root\ directory\r\n
-comment1.params=
-comment1.target=void\ pause()
-comment1.text=\r\n\ Stops\ all\ sounds\ currently\ playing.\ \ Sets\ f\ equal\ to\ null\ to\ avoid\ out\ of\ memeory\ errors.\r\n
-numComments=2
+comment0.params=file
+comment0.target=SoundPlayer(java.io.File)
+comment1.params=file
+comment1.target=void\ setFile(java.io.File)
+comment2.params=
+comment2.target=void\ play()
+comment2.text=\r\n\ Plays\ a\ .wav\ file.\r\n\ @param\ filename\ is\ the\ name\ of\ a\ .wav\ file\ in\ the\ projects\ root\ directory\r\n
+comment3.params=
+comment3.target=void\ pause()
+comment3.text=\r\n\ Stops\ all\ sounds\ currently\ playing.\ \ Sets\ f\ equal\ to\ null\ to\ avoid\ out\ of\ memeory\ errors.\r\n
+numComments=4
