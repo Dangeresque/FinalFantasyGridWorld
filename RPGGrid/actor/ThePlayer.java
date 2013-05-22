@@ -43,6 +43,9 @@ public class ThePlayer extends Actor
 
             world.getJFrame().getDisplay().moveLocation(-1, 0);
             world.add(getLocation(), new ThePlayer(world));
+        } else {
+            world.add(getLocation(), new ThePlayer(world));
+            world.getJFrame().repaint();
         }
     }
 
@@ -66,6 +69,9 @@ public class ThePlayer extends Actor
 
             world.getJFrame().getDisplay().moveLocation(1, 0);
             world.add(getLocation(), new ThePlayerDown(world));
+        } else {
+            world.add(getLocation(), new ThePlayerDown(world));
+            world.getJFrame().repaint();        
         }
     }
 
@@ -89,6 +95,9 @@ public class ThePlayer extends Actor
 
             world.getJFrame().getDisplay().moveLocation(0, -1);
             world.add(getLocation(), new ThePlayerLeft(world));
+        } else {
+            world.add(getLocation(), new ThePlayerLeft(world));
+            world.getJFrame().repaint();
         }
     }
 
@@ -112,6 +121,9 @@ public class ThePlayer extends Actor
 
             world.getJFrame().getDisplay().moveLocation(0, 1);
             world.add(getLocation(), new ThePlayerRight(world));
+        } else {
+            world.add(getLocation(), new ThePlayerRight(world));
+            world.getJFrame().repaint();
         }
     }
 }
@@ -151,7 +163,7 @@ class ThePlayerLeft extends ThePlayer
  */
 class ThePlayerRight extends ThePlayer
 {
-   /**
+    /**
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
      */
