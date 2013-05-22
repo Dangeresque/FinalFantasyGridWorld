@@ -8,6 +8,11 @@ import RPGGrid.grid.*;
  * and thus enableing movement of the player.
  */
 public class EmptySpaceTown extends WorldObject {
+    
+    /**
+     * Moves the player to its location.
+     * @param p: the player to move
+     */
     public void interact(ThePlayer p)
     {
         p.moveTo(getLocation());

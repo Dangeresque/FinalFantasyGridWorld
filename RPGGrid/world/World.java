@@ -59,6 +59,11 @@ public class World<T>
         //addGridClass("RPGGrid.grid.RPGGrid");
     }
 
+    /**
+     * Gives the Jframe the world is contained in for purposes of 
+     * manulipulating its appearance while the program is running/
+     * @return The JFrame that the world is contained in
+     */
     public WorldFrame getJFrame() {
         return (WorldFrame) frame;
     }

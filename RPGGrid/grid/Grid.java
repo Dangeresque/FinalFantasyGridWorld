@@ -39,6 +39,10 @@ public interface Grid<E>
      */
     int getNumRows();
 
+    /**
+     * Returns the player in the grid.
+     * @return a ThePlayer object in the grid
+     */
     ThePlayer getThePlayer();
 
     /**

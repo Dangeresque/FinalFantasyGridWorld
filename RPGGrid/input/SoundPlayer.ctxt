@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=filename
 comment0.target=void\ play(java.lang.String)
+comment0.text=\r\n\ Plays\ a\ .wav\ file.\r\n\ @param\ filename\ is\ the\ name\ of\ a\ .wav\ file\ in\ the\ projects\ root\ directory\r\n
 comment1.params=
 comment1.target=void\ pause()
+comment1.text=\r\n\ Stops\ all\ sounds\ currently\ playing.\r\n
 numComments=2

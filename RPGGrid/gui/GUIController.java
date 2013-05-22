@@ -1,5 +1,5 @@
 /*
- * The constructor and makeControls() methods are all that has been changed from grid world.
+ * The constructor, stop(), and makeControls() methods are all that has been changed from grid world.
  */
 
 /* 

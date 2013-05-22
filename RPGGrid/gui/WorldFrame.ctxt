@@ -38,6 +38,7 @@ comment24.params=e
 comment24.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment25.params=
 comment25.target=GridPanel\ getDisplay()
+comment25.text=\r\n\ Gives\ the\ Display\ the\ panel\ is\ on\ for\ purposes\ of\ manipulating\ it\ while\ the\ progam\ is\ running.\r\n\ @return\ the\ GridPanel\ the\ JFrame\ is\ displayed\ on\r\n
 comment26.params=
 comment26.target=void\ makeNewGridMenu()
 comment27.params=enable

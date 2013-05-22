@@ -3,6 +3,7 @@ comment0.params=g
 comment0.target=World(RPGGrid.grid.Grid)
 comment1.params=
 comment1.target=RPGGrid.gui.WorldFrame\ getJFrame()
+comment1.text=\r\n\ Gives\ the\ Jframe\ the\ world\ is\ contained\ in\ for\ purposes\ of\ \r\n\ manulipulating\ its\ appearance\ while\ the\ program\ is\ running/\r\n\ @return\ The\ JFrame\ that\ the\ world\ is\ contained\ in\r\n
 comment10.params=
 comment10.target=RPGGrid.grid.Location\ getRandomEmptyLocation()
 comment10.text=\r\n\ Gets\ a\ random\ empty\ location\ in\ this\ world.\r\n\ @return\ a\ random\ empty\ location\r\n

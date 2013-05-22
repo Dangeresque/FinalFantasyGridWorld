@@ -11,7 +11,6 @@ public class Character extends FFActor
 {
     // instance variables
     private String name;
-    private KeyReader reader;
     private ArrayList<Item> inventory;
     private Armor armor;
     private Weapon weapon;
@@ -24,7 +23,6 @@ public class Character extends FFActor
         // initialise instance variables
         super(1,5,5,7);
         name = "testName";
-        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
     }
@@ -39,7 +37,6 @@ public class Character extends FFActor
         // initialise instance variables
         super(lvl,5,5,7);
         name = n;
-        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
     }

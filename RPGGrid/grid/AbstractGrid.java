@@ -1,5 +1,5 @@
 /*
- * This is identicle to AbstractGrid in grid world, save for the fact that getJFrame() has been added.
+ * This is identicle to AbstractGrid in grid world, save for the fact that getThePlayer() has been added.
  */
 
 /* 
@@ -53,6 +53,10 @@ public abstract class AbstractGrid<E> implements Grid<E>
         return locs;
     }
 
+    /**
+     * Gives the player in the grid.
+     * @return null
+     */
     public ThePlayer getThePlayer()
     {
         return null;

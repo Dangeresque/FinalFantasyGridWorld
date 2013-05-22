@@ -470,6 +470,10 @@ public class WorldFrame<T> extends JFrame
         //setJMenuBar(mbar);
     }
 
+    /**
+     * Gives the Display the panel is on for purposes of manipulating it while the progam is running.
+     * @return the GridPanel the JFrame is displayed on
+     */
     public GridPanel getDisplay()
     {
         return display;
