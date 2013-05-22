@@ -1,8 +1,8 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=426
-package.editor.y=405
+package.editor.x=292
+package.editor.y=265
 package.numDependencies=0
 package.numTargets=7
 package.showExtends=true
@@ -57,8 +57,8 @@ target4.x=370
 target4.y=20
 target5.editor.height=800
 target5.editor.width=640
-target5.editor.x=657
-target5.editor.y=56
+target5.editor.x=613
+target5.editor.y=118
 target5.height=50
 target5.name=EmptySpaceDungeon
 target5.naviview.expanded=true

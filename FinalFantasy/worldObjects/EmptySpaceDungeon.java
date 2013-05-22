@@ -1,5 +1,7 @@
 package FinalFantasy.worldObjects;
 
+import FinalFantasy.*;
+
 import RPGGrid.actor.*;
 import RPGGrid.input.*;
 
@@ -19,12 +21,10 @@ public class EmptySpaceDungeon extends WorldObject
     public void interact(ThePlayer p) {
         p.moveTo(getLocation());
         
-        if(Math.random() > 0.9)
+        if(Math.random() > 0.95)
         {
             System.out.println("A battle Started!");
-            //A battle starts
-            //SoundPlayer.pause();
-            //SoundPlayer.play("battle");
+            Battle b = new Battle(p.getFFCharacter());
         }
     }
 }

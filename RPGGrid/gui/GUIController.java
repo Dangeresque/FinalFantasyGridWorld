@@ -115,7 +115,7 @@ public class GUIController<T>
         });
 
         //comment out this when done testing
-        /* display.addMouseListener(new MouseAdapter()
+        display.addMouseListener(new MouseAdapter()
         {
             public void mousePressed(MouseEvent evt)
             {
@@ -123,11 +123,11 @@ public class GUIController<T>
                 Location loc = display.locationForPoint(evt.getPoint());
                 if (loc != null && gr.isValid(loc) && !isRunning())
                 {
-                    display.setCurrentLocation(loc);
-                    locationClicked();
+                    //display.setCurrentLocation(loc);
+                    //locationClicked();
                 }
             }
-        });*/
+        });
         stop();
     }
 
