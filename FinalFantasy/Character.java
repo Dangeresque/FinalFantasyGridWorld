@@ -1,8 +1,5 @@
 package FinalFantasy;
 
-import RPGGrid.grid.*;
-import RPGGrid.actor.*;
-import RPGGrid.input.*;
 import java.util.*;
 /**
  * The <code>Character</code> class represents a player character.
@@ -10,7 +7,7 @@ import java.util.*;
  * @author Shonee A. Freed-Doerr
  * @version 1.0.0
  */
-public class Character extends FFActor implements ThePlayer
+public class Character extends FFActor
 {
     // instance variables
     private String name;
@@ -23,23 +20,28 @@ public class Character extends FFActor implements ThePlayer
     /**
      * Generic constructor for objects of class Character
      */
-    public Character()
-    {
+    public Character() {
         // initialise instance variables
+        super(1,5,5,7);
         name = "testName";
         reader = new KeyReader();
         inventory = new ArrayList<Item>();
+        spells = new ArrayList<Spell>();
     }
     /**
      * Parametric constructor for objects of class Character
      * 
-     * @param  n   the Character's name 
+     * @param  n   the Character's name
+     * @param  lvl the Character's level
      */
-    public Character(String n)
+    public Character(String n, int lvl)
     {
         // initialise instance variables
+        super(lvl,5,5,7);
         name = n;
         reader = new KeyReader();
+        inventory = new ArrayList<Item>();
+        spells = new ArrayList<Spell>();
     }
     /**
      * The accessor method for the <code>name</code> instance variable.
@@ -56,38 +58,6 @@ public class Character extends FFActor implements ThePlayer
      */
     public ArrayList getInventory() {
         return inventory;
-    }
-    /**
-     * The method for standard forward movement.
-     */
-    public void move()
-    {
-        Grid<Actor> gr = getGrid();
-        if (gr == null)
-            return;
-        Location loc = getLocation();
-        Location next = loc.getAdjacentLocation(getDirection());
-        if (gr.isValid(next))
-            moveTo(next);
-        else
-            removeSelfFromGrid();
-    }
-    /**
-     * The basic operative act method for the Character.
-     */
-    public void act() {
-        char key = reader.readOneKey();
-        key = KeyBindings.capitalize(key);
-        if (key == KeyBindings.LEFT_KEY) {
-            setDirection(Location.WEST);
-        } else if (key == KeyBindings.RIGHT_KEY) {
-            setDirection(Location.EAST);
-        } else if (key == KeyBindings.FORWARD_KEY) {
-            setDirection(Location.NORTH);
-        } else if (key == KeyBindings.BACK_KEY) {
-            setDirection(Location.SOUTH);
-        }
-        move();
     }
     /**
      * Adds an item to the inventory
@@ -107,10 +77,25 @@ public class Character extends FFActor implements ThePlayer
         inventory.remove(ind);
         return i;
     }
+    /**
+     * Wears new armor. If armor is already equipped, the  old armor is placed n the inventory.
+     * 
+     * @param  arm  the character's armor
+     */
     public void wear(Armor arm) {
-        if(getArmor() != null)
-            inventory.add(getArmor());
-        super.wear(arm);
+        if(armor != null)
+            inventory.add(armor);
+        armor = arm;
+    }
+    /**
+     * Weilds a new weapon. If a weapon is already equipped, the old weapon is placed n the inventory.
+     * 
+     * @param  weap  the character's weapon
+     */
+    public void wield(Weapon weap) {
+        if(weapon != null)
+            inventory.add(weapon);
+        weapon = weap;
     }
     /**
      * levels up the Character
@@ -119,5 +104,21 @@ public class Character extends FFActor implements ThePlayer
         setLevel((byte) (getLevel()+1));
         updateAttack();
         updateDefense();
+    }
+    /**
+     * The accessor method for the <code>Armor</code> that the FFActor wears.
+     * 
+     * @return     the FFActor's armor
+     */
+    public Armor getArmor() {
+        return armor;
+    }
+    /**
+     * The accessor method for the <code>Weapon</code> that the FFActor weilds.
+     * 
+     * @return     the FFActor's weapon
+     */ 
+    public Weapon getWeapon() {
+        return weapon;
     }
 }

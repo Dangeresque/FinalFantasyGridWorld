@@ -4,32 +4,41 @@ package FinalFantasy;
 /**
  * Write a description of class Spell here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Shonee A. Freed-Doerr
+ * @version 1.0.0
  */
-public class Spell
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Spell {
+    // instance variables
+    private String name;
+    private int damage;
 
     /**
      * Constructor for objects of class Spell
+     * 
+     * @param  n  the Spell's name
      */
-    public Spell()
+    public Spell(String n)
     {
         // initialise instance variables
-        x = 0;
+        name = n;
+        damage = 10;
     }
-
     /**
-     * An example of a method - replace this comment with your own
+     * The accessor method for the Spell's <code>name</code>.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @return  name  the character's name
      */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // put your code here
-        return x + y;
+        return name;
+    }
+    /**
+     * The mutator method for the Spell's <code>name</code>.
+     * 
+     * @param  n  the character's name
+     */
+    public void setName(String n)
+    {
+        name = n;
     }
 }

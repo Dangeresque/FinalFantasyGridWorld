@@ -1,8 +1,11 @@
 #BlueJ class context
-comment0.params=toughness\ bodyPart
-comment0.target=Armor(int,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ <code>Armor</code>;\ <br>\r\n\ <bold>Precondition\:</bold>\ toughness\ is\ a\ positive\ int\r\n
+comment0.params=str
+comment0.target=Armor(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ <code>Armor</code>;\ <br>\r\n\ <bold>Precondition\:</bold>\ toughness\ is\ a\ positive\ int\r\n\ \r\n\ @param\ \ str\ \ the\ Armor's\ strength\r\n
 comment1.params=
 comment1.target=int\ getStrength()
-comment1.text=\r\n\ The\ accessor\ method\ for\ <code>strength</code>.\r\n\ \r\n\ @return\ \ \ \ \ the\ armor's\ strength\r\n
-numComments=2
+comment1.text=\r\n\ The\ accessor\ method\ for\ the\ Armor's\ <code>strength</code>.\r\n\ \r\n\ @return\ \ strength\ \ the\ armor's\ strength\r\n
+comment2.params=str
+comment2.target=void\ setStrength(int)
+comment2.text=\r\n\ The\ accessor\ method\ for\ the\ Armor's\ <code>strength</code>.\r\n\ \r\n\ @param\ \ str\ \ the\ armor's\ strength\r\n
+numComments=3

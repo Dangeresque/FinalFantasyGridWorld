@@ -1,5 +1,3 @@
- 
-
 import RPGGrid.actor.*;
 import RPGGrid.grid.*;
 import RPGGrid.gui.*;
@@ -55,18 +53,18 @@ public class CastleOfOrdeal3F
         world.add(locs.get(23), new Obstacle());
         world.add(locs.get(24), new Obstacle());
         world.add(locs.get(25), new Obstacle());
-        world.add(locs.get(26), new GridItem());
+        world.add(locs.get(26), new GridItem("agasd"));
         world.add(locs.get(31), new Obstacle());
         world.add(locs.get(43), new Obstacle());
-        world.add(locs.get(47), new GridItem());
+        world.add(locs.get(47), new GridItem("agscvas"));
         world.add(locs.get(49), new Obstacle());
         world.add(locs.get(50), new Obstacle());
-        world.add(locs.get(51), new GridItem());
+        world.add(locs.get(51), new GridItem("AGxcva"));
         world.add(locs.get(56), new Obstacle());
         world.add(locs.get(68), new Obstacle());
         world.add(locs.get(74), new Obstacle());
         world.add(locs.get(75), new Obstacle());
-        world.add(locs.get(76), new Obstacle());
+        world.add(locs.get(76), new GridItem("agdv"));
         world.add(locs.get(81), new Obstacle());
         world.add(locs.get(82), new Obstacle());
         world.add(locs.get(83), new Obstacle());
@@ -100,7 +98,7 @@ public class CastleOfOrdeal3F
         world.add(locs.get(142), new Obstacle());
         world.add(locs.get(143), new Obstacle());
         world.add(locs.get(144), new Obstacle());
-        world.add(locs.get(145), new Door());
+        world.add(locs.get(145), new Door("Ordeal0"));
         world.add(locs.get(146), new Obstacle());
         world.add(locs.get(147), new Obstacle());
         world.add(locs.get(148), new Obstacle());
@@ -200,13 +198,13 @@ public class CastleOfOrdeal3F
         world.add(locs.get(544), new Obstacle());
         world.add(locs.get(549), new Obstacle());
         world.add(locs.get(550), new Obstacle());
-        world.add(locs.get(551), new GridItem());
-        world.add(locs.get(552), new GridItem());
-        world.add(locs.get(553), new GridItem());
-        world.add(locs.get(554), new GridItem());
+        world.add(locs.get(551), new GridItem("agsdf"));
+        world.add(locs.get(552), new GridItem("afgwfg"));
+        world.add(locs.get(553), new GridItem("afgagsdf"));
+        world.add(locs.get(554), new GridItem("agwsd"));
         world.add(locs.get(556), new Obstacle());
         world.add(locs.get(569), new Obstacle());
-        world.add(locs.get(572), new Door());
+        world.add(locs.get(572), new Portal());
         world.add(locs.get(574), new Obstacle());
         world.add(locs.get(575), new Obstacle());
         world.add(locs.get(581), new Obstacle());
@@ -225,7 +223,7 @@ public class CastleOfOrdeal3F
         world.add(locs.get(623), new Obstacle());
         world.add(locs.get(624), new Obstacle());
 
-        Location playerLoc = new Location(22, 21);
+        Location playerLoc = new Location(19, 18);
         ThePlayer p = new ThePlayer(world);
         world.add(playerLoc, p);
         
@@ -233,5 +231,7 @@ public class CastleOfOrdeal3F
 
         RPGListner mover = new RPGListner(world);
         world.getJFrame().getDisplay().moveLocation(playerLoc.getRow(), playerLoc.getCol());
+        
+        SoundPlayer.play("dungeon");
     }
 }

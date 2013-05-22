@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=Battle(Character)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Battle\r\n\ \r\n\ @param\ \ c\ \ the\ player\ Character\r\n
+numComments=1

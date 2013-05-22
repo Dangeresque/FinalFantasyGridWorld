@@ -1,4 +1,6 @@
 #BlueJ class context
-comment0.params=p
-comment0.target=void\ interact(RPGGrid.actor.ThePlayer)
-numComments=1
+comment0.params=contained
+comment0.target=GridItem(java.lang.String)
+comment1.params=p
+comment1.target=void\ interact(RPGGrid.actor.ThePlayer)
+numComments=2

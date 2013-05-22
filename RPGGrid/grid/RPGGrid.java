@@ -26,7 +26,7 @@ public class RPGGrid extends BoundedGrid
      * Sets the occupants of the grid to a pre-defined array, useful for level creation.
      * @param a: an array of objects
      */
-    public void setOccupantArray(Object[][] a)
+    public void setOccupantArray(Actor[][] a)
     {
         occupantArray = a;
     }

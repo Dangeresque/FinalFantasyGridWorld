@@ -1,6 +1,5 @@
 package FinalFantasy;
 
-import RPGGrid.actor.*;
 
 /**
  * The <code>Weapon</code> class represents weaponry.
@@ -14,18 +13,28 @@ public class Weapon implements Item {
 
     /**
      * Constructor for objects of class <code>Weapon</code>
+     * 
+     * @param  pwr  the weapon's power
      */
-    public Weapon()
+    public Weapon(int pwr)
     {
         // initialise instance variables
-        power = 0;
+        power = pwr;
     }
-
     /**
-     * An example of a method - replace this comment with your own
+     * The accessor method for the weapon's power
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @return  power  the weapon's power
      */
-
+    public int getPower() {
+        return power;
+    }
+    /**
+     * The mutator method for the weapon's power
+     * 
+     * @param  pwr  the weapon's power
+     */
+    public void setPower(int pwr) {
+        power = pwr;
+    }
 }
