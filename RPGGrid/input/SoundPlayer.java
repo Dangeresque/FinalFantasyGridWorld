@@ -9,6 +9,7 @@ import java.io.*;
 public class SoundPlayer
 {
     private static Clip clip;
+    private static File f;
     
     /**
      * Plays a .wav file.
@@ -17,10 +18,11 @@ public class SoundPlayer
     public static void play(String filename)
     {
         filename = filename + ".wav";
+        f = new File(filename);
         try
         {
             clip = AudioSystem.getClip();
-            clip.open(AudioSystem.getAudioInputStream(new File(filename)));
+            clip.open(AudioSystem.getAudioInputStream(f));
             clip.start();
         }
         catch (Exception ex)
@@ -30,10 +32,11 @@ public class SoundPlayer
     }
     
     /**
-     * Stops all sounds currently playing.
+     * Stops all sounds currently playing.  Sets f equal to null to avoid out of memeory errors.
      */
     public static void pause()
     {
         clip.stop();
+        f = null;
     }
 }

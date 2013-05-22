@@ -21,7 +21,7 @@ public class EmptySpaceDungeon extends WorldObject
     public void interact(ThePlayer p) {
         p.moveTo(getLocation());
         
-        if(Math.random() > 0.95)
+        if(Math.random() > 0.92)
         {
             System.out.println("A battle Started!");
             Battle b = new Battle(p.getFFCharacter());
