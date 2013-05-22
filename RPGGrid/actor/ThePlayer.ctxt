@@ -1,12 +1,17 @@
 #BlueJ class context
 comment0.params=w
 comment0.target=ThePlayer(RPGGrid.world.RPGWorld)
+comment0.text=\r\n\ Constructs\ a\ player\ with\ a\ reference\ to\ a\ given\ world,\ and\ removes\ any\ color\r\n\ filters\r\n\ @param\ a\ RPGWorld\ for\ the\ player\ to\ reference\r\n
 comment1.params=
 comment1.target=void\ up()
+comment1.text=\r\n\ Causes\ the\ player\ to\ interact\ with\ the\ WorldObject\ above\ it,\r\n\ moves\ the\ camera\ if\ necisary,\ and\ changes\ the\ icon\ of\ the\ player.\r\n
 comment2.params=
 comment2.target=void\ down()
+comment2.text=\r\n\ Causes\ the\ player\ to\ interact\ with\ the\ WorldObject\ below\ it,\r\n\ moves\ the\ camera\ if\ necisary,\ and\ changes\ the\ icon\ of\ the\ player.\r\n
 comment3.params=
 comment3.target=void\ left()
+comment3.text=\r\n\ Causes\ the\ player\ to\ interact\ with\ the\ WorldObject\ to\ its\ left,\r\n\ moves\ the\ camera\ if\ necisary,\ and\ changes\ the\ icon\ of\ the\ player.\r\n
 comment4.params=
 comment4.target=void\ right()
+comment4.text=\r\n\ Causes\ the\ player\ to\ interact\ with\ the\ WorldObject\ to\ its\ right,\r\n\ moves\ the\ camera\ if\ necisary,\ and\ changes\ the\ icon\ of\ the\ player.\r\n
 numComments=5

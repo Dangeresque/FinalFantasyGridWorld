@@ -6,9 +6,18 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * A <code>RPGListner<code> manages the user input for a RPGWorld.
+ */
 public class RPGListner
 {
     RPGWorld world;
+    
+    /**
+     * Constructs a RPGListner that manages player input and hotkeys
+     * in a given world.
+     * @param the world for the KeyListners to be added to.
+     */
     public RPGListner(RPGWorld w)
     {
         world = w;
@@ -16,24 +25,28 @@ public class RPGListner
             {
                 public void keyPressed(KeyEvent arg0)
                 {
-                    boolean[] keys = new boolean[KeyEvent.KEY_TYPED];
-                    keys[arg0.getKeyCode()] = true;
+                    boolean[] k = new boolean[KeyEvent.KEY_TYPED];
+                    k[arg0.getKeyCode()] = true;
 
-                    if(keys[KeyEvent.VK_W])
+                    if(k[KeyEvent.VK_W])
                     {
                         world.getGrid().getThePlayer().up();
                     }
-                    if(keys[KeyEvent.VK_S])
+                    if(k[KeyEvent.VK_S])
                     {
                         world.getGrid().getThePlayer().down();
                     }
-                    if(keys[KeyEvent.VK_A])
+                    if(k[KeyEvent.VK_A])
                     {
                         world.getGrid().getThePlayer().left();
                     }
-                    if(keys[KeyEvent.VK_D])
+                    if(k[KeyEvent.VK_D])
                     {
                         world.getGrid().getThePlayer().right();
+                    }
+                    if(k[KeyEvent.VK_E])
+                    {
+                        System.out.println("Game menu not yet implemented.");
                     }
                 }
             });

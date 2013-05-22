@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=p
 comment0.target=void\ interact(ThePlayer)
+comment0.text=\r\n\ Interacts\ with\ the\ given\ player,\ but\ does\ nothing.\r\n\ @param\ the\ player\ to\ do\ nothing\ to\r\n
 numComments=1

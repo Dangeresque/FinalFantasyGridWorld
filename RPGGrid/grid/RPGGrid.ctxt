@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.params=rows\ cols
 comment0.target=RPGGrid(int,\ int)
-comment1.params=
-comment1.target=RPGGrid.actor.ThePlayer\ getThePlayer()
-numComments=2
+comment0.text=\r\n\ Constructs\ a\ RPGGrid\ that\ passes\ its\ values\ to\ the\ BoundedGrid\r\n\ constructor.\r\n\ @param\ rows\:\ the\ number\ of\ rows\ in\ the\ grid\r\n\ @param\ cols\:\ the\ number\ of\ columns\ in\ the\ grid\r\n
+comment1.params=a
+comment1.target=void\ setOccupantArray(java.lang.Object[][])
+comment1.text=\r\n\ Sets\ the\ occupants\ of\ the\ grid\ to\ a\ pre-defined\ array,\ useful\ for\ level\ creation.\r\n\ @param\ a\:\ an\ array\ of\ objects\r\n
+comment2.params=
+comment2.target=RPGGrid.actor.ThePlayer\ getThePlayer()
+comment2.text=\r\n\ Finds\ the\ player\ in\ the\ grid.\r\n\ @return\ the\ first\ instance\ of\ ThePlayer\ in\ the\ grid\r\n
+numComments=3
