@@ -8,7 +8,7 @@ package FinalFantasy;
  */
 public class Battle {
     // instance variables
-    private Character character;
+    private FFCharacter character;
     private Enemy enemy;
 
     /**
@@ -16,7 +16,7 @@ public class Battle {
      * 
      * @param  c  the player Character
      */
-    public Battle(Character c)
+    public Battle(FFCharacter c)
     {
         // initialise instance variables
         character = c;

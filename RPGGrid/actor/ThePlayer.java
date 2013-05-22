@@ -4,23 +4,35 @@ import RPGGrid.grid.Location;
 import RPGGrid.world.*;
 
 import FinalFantasy.worldObjects.*;
+import FinalFantasy.*;
 
 /**
  * A <code>ThePlayer<code> is the entity through which the user interacts with the game.
  */
 public class ThePlayer extends Actor
 {
-    public RPGWorld world;
+    private RPGWorld world;
+    private FFCharacter character;
 
     /**
      * Constructs a player with a reference to a given world, and removes any color
      * filters
      * @param a RPGWorld for the player to reference
      */
-    public ThePlayer(RPGWorld w)
+    public ThePlayer(RPGWorld w, FFCharacter c)
     {
         setColor(null);
         world = w;
+        character = c;
+    }
+
+    /**
+     * Gives the Character reperesented by ThePlayer.
+     * @return the Character stored in ThePlayer
+     */
+    public FFCharacter getFFCharacter()
+    {
+        return character;
     }
 
     /**
@@ -42,9 +54,9 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(-1, 0);
-            world.add(getLocation(), new ThePlayer(world));
+            world.add(getLocation(), new ThePlayer(world, character));
         } else {
-            world.add(getLocation(), new ThePlayer(world));
+            world.add(getLocation(), new ThePlayer(world, character));
             world.getJFrame().repaint();
         }
     }
@@ -68,9 +80,9 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(1, 0);
-            world.add(getLocation(), new ThePlayerDown(world));
+            world.add(getLocation(), new ThePlayerDown(world, character));
         } else {
-            world.add(getLocation(), new ThePlayerDown(world));
+            world.add(getLocation(), new ThePlayerDown(world, character));
             world.getJFrame().repaint();        
         }
     }
@@ -94,9 +106,9 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(0, -1);
-            world.add(getLocation(), new ThePlayerLeft(world));
+            world.add(getLocation(), new ThePlayerLeft(world, character));
         } else {
-            world.add(getLocation(), new ThePlayerLeft(world));
+            world.add(getLocation(), new ThePlayerLeft(world, character));
             world.getJFrame().repaint();
         }
     }
@@ -120,9 +132,9 @@ public class ThePlayer extends Actor
             e.putSelfInGrid(getGrid(), current);
 
             world.getJFrame().getDisplay().moveLocation(0, 1);
-            world.add(getLocation(), new ThePlayerRight(world));
+            world.add(getLocation(), new ThePlayerRight(world, character));
         } else {
-            world.add(getLocation(), new ThePlayerRight(world));
+            world.add(getLocation(), new ThePlayerRight(world, character));
             world.getJFrame().repaint();
         }
     }
@@ -137,9 +149,9 @@ class ThePlayerDown extends ThePlayer
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
      */
-    public ThePlayerDown(RPGWorld w)
+    public ThePlayerDown(RPGWorld w, FFCharacter c)
     {
-        super(w);
+        super(w, c);
     }
 }
 
@@ -152,9 +164,9 @@ class ThePlayerLeft extends ThePlayer
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
      */
-    public ThePlayerLeft(RPGWorld w)
+    public ThePlayerLeft(RPGWorld w, FFCharacter c)
     {
-        super(w);
+        super(w, c);
     }
 }
 
@@ -167,8 +179,8 @@ class ThePlayerRight extends ThePlayer
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
      */
-    public ThePlayerRight(RPGWorld w)
+    public ThePlayerRight(RPGWorld w, FFCharacter c)
     {
-        super(w);
+        super(w, c);
     }
 }

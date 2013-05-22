@@ -1,21 +1,21 @@
 package FinalFantasy.worldObjects;
 
 import RPGGrid.actor.*;
+import FinalFantasy.*;
 
 /**
  * A <code>GridItem<code> is an object on the grid that contains
  * items for the player to pick up.
  */
 public class GridItem extends WorldObject {
-    // add constructor with item as an input
-    private String containedItem;
+    private Item containedItem;
     private boolean given = false;
     
     /**
      * Constructs a GridItem along with the name of the item it contains
      * @param contained the name of the item contained
      */
-    public GridItem(String contained)
+    public GridItem(Item contained)
     {
         containedItem = contained;
     }
@@ -28,7 +28,7 @@ public class GridItem extends WorldObject {
     {
         if (given == false)
         {
-            // add item to inventory
+            p.getFFCharacter().giveItem(containedItem);
             System.out.println("Thou hadst obtained an item.");
             given = true;
         }

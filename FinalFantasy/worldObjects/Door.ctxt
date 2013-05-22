@@ -5,4 +5,6 @@ comment0.text=\r\n\ Constructs\ a\ door\ along\ with\ the\ name\ of\ its\ key.\r
 comment1.params=p
 comment1.target=void\ interact(RPGGrid.actor.ThePlayer)
 comment1.text=\r\n\ Allows\ the\ player\ to\ pass\ through\ it\ if\ the\ player\ has\ its\ key.\r\n\ @param\ p\ the\ player\ who\ is\ trying\ to\ pass\ through\ the\ door\r\n
-numComments=2
+comment2.params=p
+comment2.target=java.util.ArrayList\ getKeys(RPGGrid.actor.ThePlayer)
+numComments=3

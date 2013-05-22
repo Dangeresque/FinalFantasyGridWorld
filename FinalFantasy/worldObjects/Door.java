@@ -1,6 +1,10 @@
 package FinalFantasy.worldObjects;
 
+import FinalFantasy.*;
+
 import RPGGrid.actor.*;
+
+import java.util.ArrayList;
 
 /**
  * A <code>Door<code> turns into empty space if the player interacting
@@ -9,7 +13,7 @@ import RPGGrid.actor.*;
 public class Door extends WorldObject {
     // have constructor with key (item) name
     private String keyName;
-    
+
     /**
      * Constructs a door along with the name of its key.
      * @param key: the name of the item that must be used to open the door
@@ -25,11 +29,29 @@ public class Door extends WorldObject {
      */
     public void interact(ThePlayer p)
     {
-        /*if (player has no key)
+        for (Item k : getKeys(p))
         {
+            Key K = (Key) k;
+            if (K.getName().equals(keyName))
+            {
+                System.out.println("Thou use-ith thine key to open ye door.");
+                p.moveTo(getLocation());
+                return;
+            }
+        }
         System.out.println("Thou needidst a key");
-        } else { */
-        System.out.println("Thou use-ith thine key to open ye door.");
-        p.moveTo(getLocation());
+    }
+
+    public ArrayList<Item> getKeys(ThePlayer p)
+    {
+        ArrayList<Item> toReturn = new ArrayList<Item>();
+        for(Item i : p.getFFCharacter().getInventory())
+        {
+            if (i instanceof Key)
+            {
+                toReturn.add(i);
+            }
+        }
+        return toReturn;
     }
 }

@@ -23,8 +23,8 @@ public class EmptySpaceDungeon extends WorldObject
         {
             System.out.println("A battle Started!");
             //A battle starts
-            SoundPlayer.pause();
-            SoundPlayer.play("battle");
+            //SoundPlayer.pause();
+            //SoundPlayer.play("battle");
         }
     }
 }

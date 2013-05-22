@@ -7,7 +7,7 @@ import java.util.*;
  * @author Shonee A. Freed-Doerr
  * @version 1.0.0
  */
-public class Character extends FFActor
+public class FFCharacter extends FFActor
 {
     // instance variables
     private String name;
@@ -19,7 +19,7 @@ public class Character extends FFActor
     /**
      * Generic constructor for objects of class Character
      */
-    public Character() {
+    public FFCharacter() {
         // initialise instance variables
         super(1,5,5,7);
         name = "testName";
@@ -32,7 +32,7 @@ public class Character extends FFActor
      * @param  n   the Character's name
      * @param  lvl the Character's level
      */
-    public Character(String n, int lvl)
+    public FFCharacter(String n, int lvl)
     {
         // initialise instance variables
         super(lvl,5,5,7);
@@ -53,7 +53,7 @@ public class Character extends FFActor
      * 
      * @return     the character's inventory
      */
-    public ArrayList getInventory() {
+    public ArrayList<Item> getInventory() {
         return inventory;
     }
     /**
