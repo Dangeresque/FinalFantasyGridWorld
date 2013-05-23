@@ -24,21 +24,37 @@ public class Spell {
         damage = 10;
     }
     /**
-     * The accessor method for the Spell's <code>name</code>.
+     * The accessor method for the Spell's name.
      * 
-     * @return  name  the character's name
+     * @return    the spell's name
      */
     public String getName()
     {
         return name;
     }
     /**
-     * The mutator method for the Spell's <code>name</code>.
+     * The accessor method for the Spell's damage.
      * 
-     * @param  n  the character's name
+     * @return    the spell's damage
+     */
+    public int getDamage() {
+        return damage;
+    }
+    /**
+     * The mutator method for the Spell's name.
+     * 
+     * @param  n  the spell's name
      */
     public void setName(String n)
     {
         name = n;
+    }
+    /**
+     * The mutator method for the Spell's damage.
+     * 
+     * @param  n  the spell's damage
+     */
+    public void setDamage(int dam) {
+        damage = dam;
     }
 }

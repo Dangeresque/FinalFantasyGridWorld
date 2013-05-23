@@ -11,6 +11,7 @@ public class FFCharacter extends FFActor
 {
     // instance variables
     private String name;
+    private KeyReader reader;
     private ArrayList<Item> inventory;
     private Armor armor;
     private Weapon weapon;
@@ -23,6 +24,7 @@ public class FFCharacter extends FFActor
         // initialise instance variables
         super(1,5,5,7);
         name = "testName";
+        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
     }
@@ -37,6 +39,7 @@ public class FFCharacter extends FFActor
         // initialise instance variables
         super(lvl,5,5,7);
         name = n;
+        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
     }
@@ -53,7 +56,7 @@ public class FFCharacter extends FFActor
      * 
      * @return     the character's inventory
      */
-    public ArrayList<Item> getInventory() {
+    public ArrayList getInventory() {
         return inventory;
     }
     /**
@@ -103,19 +106,27 @@ public class FFCharacter extends FFActor
         updateDefense();
     }
     /**
-     * The accessor method for the <code>Armor</code> that the FFActor wears.
+     * The accessor method for the <code>Armor</code> that the Character wears.
      * 
-     * @return     the FFActor's armor
+     * @return     the Character's armor
      */
     public Armor getArmor() {
         return armor;
     }
     /**
-     * The accessor method for the <code>Weapon</code> that the FFActor weilds.
+     * The accessor method for the <code>Weapon</code> that the Character weilds.
      * 
-     * @return     the FFActor's weapon
+     * @return     the Character's weapon
      */ 
     public Weapon getWeapon() {
         return weapon;
+    }
+    /**
+     * The accessor method for the ArrayList of the Character's spells.
+     * 
+     * @return     the Character's spells
+     */ 
+    public ArrayList<Spell> getSpells() {
+        return spells;
     }
 }

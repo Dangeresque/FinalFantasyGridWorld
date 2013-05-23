@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KeyBindings()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ KeyBindings\r\n
+comment1.params=let
+comment1.target=char\ capitalize(char)
+comment1.text=\r\n\ Shifts\ lowercase\ letters\ into\ uppercase.\r\n\ \r\n\ @param\ let\ \ the\ letter\ to\ be\ changed\ to\ its\ uppercase\ form\r\n\ @return\ \ \ \ \ the\ letter\ in\ uppercase\ form\r\n
+numComments=2

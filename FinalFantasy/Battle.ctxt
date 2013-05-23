@@ -1,5 +1,23 @@
 #BlueJ class context
-comment0.params=c\ sound
-comment0.target=Battle(FFCharacter,\ RPGGrid.input.SoundPlayer)
+comment0.params=c
+comment0.target=Battle(FFCharacter)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Battle\r\n\ \r\n\ @param\ \ c\ \ the\ player\ Character\r\n
-numComments=1
+comment1.params=chara
+comment1.target=void\ attack(boolean)
+comment1.text=\r\n\ This\ method\ causes\ one\ FFActor\ to\ attack\ the\ other\r\n\ \r\n\ @param\ \ which\ \ a\ boolean\ representing\ which\ FFActor\ is\ the\ attacker\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ the\ character\ is\ true,\ the\ enemy\ is\ false\ \r\n
+comment2.params=spell
+comment2.target=void\ castSpell(Spell)
+comment2.text=\r\n\ This\ method\ causes\ you\ to\ cast\ a\ spell.\r\n\ \r\n\ @param\ \ spell\ \ the\ spell\ being\ cast\r\n
+comment3.params=
+comment3.target=void\ flee()
+comment3.text=\r\n\ Attempt\ to\ flee\ the\ battle.\r\n
+comment4.params=
+comment4.target=void\ endBattle()
+comment4.text=\r\n\ Ends\ the\ battle.\r\n
+comment5.params=choice
+comment5.target=void\ turn(int)
+comment5.text=\r\n\ This\ method\ takes\ one\ turn.\r\n\ \r\n\ @param\ \ choice\ \ the\ player's\ choice\ of\ action\r\n
+comment6.params=
+comment6.target=void\ chooseSpell()
+comment6.text=\r\n\ Chooses\ the\ spell\ the\ character\ will\ use.\r\n
+numComments=7
