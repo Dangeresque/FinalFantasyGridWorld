@@ -70,6 +70,11 @@ public class GUIController<T>
     /**
      * Creates a new controller tied to the specified display and gui
      * frame.
+     * 
+     * This has been modified by Sean MacLane to ignore mouse input, 
+     * preventing users from cheating while playing an RPG game by calling
+     * methods on the grid at unintended times.
+     * 
      * @param parent the frame for the world window
      * @param disp the panel that displays the grid
      * @param displayMap the map for occupant displays
@@ -114,7 +119,6 @@ public class GUIController<T>
             }
         });
 
-        //comment out this when done testing
         display.addMouseListener(new MouseAdapter()
         {
             public void mousePressed(MouseEvent evt)
@@ -163,6 +167,11 @@ public class GUIController<T>
      * indicated by the speed slider up Depending on the run option, it will
      * either carry out steps for some fixed number or indefinitely
      * until stopped.
+     * 
+     * This has been modified by Sean MacLane to re hide the tool tips
+     * every turn to prevent them from reverting to true after a grids 
+     * construction.
+     * 
      */
     public void run()
     {
@@ -198,6 +207,11 @@ public class GUIController<T>
     /**
      * Builds the panel with the various controls (buttons and
      * slider).
+     * 
+     * This has been modified by Sean MacLane to remove all buttons,
+     * button areas, and borders from the user interface to provide
+     * a cleaner look than Grid World.
+     * 
      */
     private void makeControls()
     {

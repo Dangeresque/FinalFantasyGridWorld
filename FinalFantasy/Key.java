@@ -25,6 +25,10 @@ public class Key implements Item
         return name;
     }
     
+    /**
+     * Gives the type of item along with its unique value
+     * @return a String describing the item
+     */
         public String toString() {
         return "Key " + name;
     }

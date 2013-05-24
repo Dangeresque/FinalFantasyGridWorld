@@ -1,3 +1,7 @@
+/*
+ * This code is based off an input tutorial from docs.oracle.com.
+ */
+
 package RPGGrid.input;
 
 import RPGGrid.world.*;
@@ -8,6 +12,7 @@ import java.awt.event.KeyListener;
 
 /**
  * A <code>RPGListner<code> manages the user input for a RPGWorld.
+ * @author Sean MacLane with the help of Oracle
  */
 public class RPGListner
 {
@@ -16,7 +21,7 @@ public class RPGListner
     /**
      * Constructs a RPGListner that manages player input and hotkeys
      * in a given world.
-     * @param the world for the KeyListners to be added to.
+     * @param w The world for the KeyListners to be added to.
      */
     public RPGListner(RPGWorld w)
     {

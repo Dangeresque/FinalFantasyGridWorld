@@ -2,6 +2,7 @@ package RPGGrid.actor;
 
 /**
  * An <code>Interactive</code> is an entity who can interact with ThePlayer.
+ * @author Sean MacLane
  * <br />
  */
 public interface Interactive

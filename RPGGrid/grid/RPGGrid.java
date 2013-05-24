@@ -6,6 +6,7 @@ import RPGGrid.actor.*;
  * A <code>RPGGrid<code> is a custom grid that makes it easier to find instances of 
  * ThePlayer and can better implement grids with pre defined arrays for level
  * management.
+ * @author Sean MacLane
  */
 public class RPGGrid extends BoundedGrid
 {
@@ -47,5 +48,21 @@ public class RPGGrid extends BoundedGrid
             }
         }
         return null;
+    }
+
+    public void killThePlayer()
+    {
+        for (int r = 0; r < getNumRows(); r++)
+        {
+            for (int c = 0; c < getNumCols(); c++)
+            {
+                Location loc = new Location(r, c);
+                if (get(loc) instanceof ThePlayer)
+                {
+                    ThePlayer p = (ThePlayer) get(loc);
+                    p.removeSelfFromGrid();
+                }
+            }
+        }
     }
 }

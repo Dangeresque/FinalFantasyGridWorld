@@ -39,6 +39,10 @@ public class Armor implements Item {
         strength = str;
     }
 
+    /**
+     * Gives the type of item along with its unique value
+     * @return a String describing the item
+     */
     public String toString() {
         String ret = "Armor " + strength;
         return ret;

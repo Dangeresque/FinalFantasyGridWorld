@@ -10,4 +10,5 @@ comment2.target=void\ setPower(int)
 comment2.text=\r\n\ The\ mutator\ method\ for\ the\ weapon's\ power\r\n\ \r\n\ @param\ \ pwr\ \ the\ weapon's\ power\r\n
 comment3.params=
 comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ Gives\ the\ type\ of\ item\ along\ with\ its\ unique\ value\r\n\ @return\ a\ String\ describing\ the\ item\r\n
 numComments=4

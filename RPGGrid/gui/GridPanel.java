@@ -1,5 +1,5 @@
 /*
- * The constructor and MIN_CELL_SIZE variable are all that has been changed from grid world.
+ * The constructor, paintComponent(), and MIN_CELL_SIZE variable are all that has been changed from grid world.
  */
 
 /* 
@@ -93,6 +93,9 @@ PseudoInfiniteViewport.Pannable
     /**
      * Construct a new GridPanel object with no grid. The view will be
      * empty.
+     * 
+     * This has been modified by Sean MacLane to remove tooltips from
+     * the grid.
      */
     public GridPanel(DisplayMap map, ResourceBundle res)
     {
@@ -103,6 +106,17 @@ PseudoInfiniteViewport.Pannable
 
     /**
      * Paint this component.
+     * 
+     * This method has been modified by Sean MacLane to remove the
+     * watermark, gridline, and current location selector box from
+     * Grid World.
+     * 
+     * The indicated lines were written by and un-named teacher in the 
+     * Winston-Salem/Forsyth County School district (I couldnt figure out
+     * which teacher it was, the power point wasn't on a specific teachers
+     * page, and contained no information as to an author), and has been
+     * implemented to display an image in the back of a grid.
+     * 
      * @param g the Graphics object to use to render this component
      */
     public void paintComponent(Graphics g)
@@ -117,15 +131,17 @@ PseudoInfiniteViewport.Pannable
         g2.setColor(backgroundColor); 
         g2.fillRect(insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1) + 1);
 
+        //code by Winston-Salem/Forsyth County School district teacher starts
         BufferedImage img = null;
 
         try
         {
-            img = ImageIO.read(new File("currentMap.gif"));
+            img = ImageIO.read(new File("currentMap.gif")); // the input in this line has been modified
         } catch (IOException e) {
         }
         g2.drawImage(img, insets.left, insets.top, numCols * (cellSize + 1) + 1, numRows * (cellSize + 1)
             + 1, 0, 0, img.getWidth(), img.getHeight(), null);
+        //code by Winston-Salem/Forsyth County School district teacher stops
 
         //drawWatermark(g2);
         //drawGridlines(g2);

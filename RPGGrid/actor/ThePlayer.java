@@ -8,6 +8,8 @@ import FinalFantasy.*;
 
 /**
  * A <code>ThePlayer<code> is the entity through which the user interacts with the game.
+ * @author Sean MacLane
+ * <br />
  */
 public class ThePlayer extends Actor
 {
@@ -18,6 +20,7 @@ public class ThePlayer extends Actor
      * Constructs a player with a reference to a given world, and removes any color
      * filters
      * @param a RPGWorld for the player to reference
+     * @param c The FFCharacter attached to the player
      */
     public ThePlayer(RPGWorld w, FFCharacter c)
     {
@@ -34,7 +37,11 @@ public class ThePlayer extends Actor
     {
         return character;
     }
-    
+
+    /**
+     * Returns the world the player is in.
+     * @return the world that contains the player
+     */
     public RPGWorld getWorld()
     {
         return world;
@@ -153,6 +160,7 @@ class ThePlayerDown extends ThePlayer
     /**
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
+     * @param c The FFCharacter attached to the player
      */
     public ThePlayerDown(RPGWorld w, FFCharacter c)
     {
@@ -168,6 +176,7 @@ class ThePlayerLeft extends ThePlayer
     /**
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
+     * @param c The FFCharacter attached to the player
      */
     public ThePlayerLeft(RPGWorld w, FFCharacter c)
     {
@@ -183,6 +192,7 @@ class ThePlayerRight extends ThePlayer
     /**
      * Constructs a player identicle with ThePlayer, but with a unique icon.
      * @param a RPGWorld for the player to reference
+     * @param c The FFCharacter attached to the player
      */
     public ThePlayerRight(RPGWorld w, FFCharacter c)
     {

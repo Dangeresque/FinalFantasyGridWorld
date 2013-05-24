@@ -42,6 +42,11 @@ public class Door extends WorldObject {
         System.out.println("Thou needidst a key");
     }
 
+    /**
+     * Gets an ArrayList of items which are all keys so interact()
+     * can more efficiently find out if the player has the key.
+     * @param p the player to search the inventory of
+     */
     public ArrayList<Item> getKeys(ThePlayer p)
     {
         ArrayList<Item> toReturn = new ArrayList<Item>();

@@ -1,5 +1,5 @@
 /*
- * The constructor and makeMenus() method are the only methods modified from gridworld.  The getDisplay() class is new.
+ * The constructor and makeMenus() method are the only methods modified from gridworld.  The getDisplay() method is new.
  */
 
 /* 
@@ -98,6 +98,11 @@ public class WorldFrame<T> extends JFrame
 
     /**
      * Constructs a WorldFrame that displays the occupants of a world
+     * 
+     * This has been modified by Sean MacLane to have a different window name,
+     * have no empty border around the JPanel, to disable mouse wheel scrolling,
+     * to hide all scrollbars, and to remove the message area from Grid World.
+     * 
      * @param world the world to display
      */
     public WorldFrame(World<T> world)
@@ -168,12 +173,13 @@ public class WorldFrame<T> extends JFrame
 
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setViewport(new PseudoInfiniteViewport(scrollPane));
+
         scrollPane.setWheelScrollingEnabled(false);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
         scrollPane.setViewportView(display);
         content.add(scrollPane, BorderLayout.CENTER);
-        //content.add(scrollPane, BorderLayout.AFTER_LAST_LINE);
 
         gridClasses = new TreeSet<Class>(new Comparator<Class>()
             {
@@ -210,6 +216,15 @@ public class WorldFrame<T> extends JFrame
 
         repaint(); // to show message
         display.setGrid(gr);
+    }
+
+    /**
+     * Gives the Display the Jpanel is on for purposes of manipulating it while the progam is running.
+     * @return the GridPanel the JFrame is displayed on
+     */
+    public GridPanel getDisplay()
+    {
+        return display;
     }
 
     public void repaint()
@@ -353,6 +368,11 @@ public class WorldFrame<T> extends JFrame
             button.setText(title);
     }
 
+    /**
+     * This method has been modified from the version written by
+     * the College Board in order to remove the toolbar at the top
+     * of the screen.
+     */
     private void makeMenus()
     {
         JMenuBar mbar = new JMenuBar();
@@ -468,15 +488,6 @@ public class WorldFrame<T> extends JFrame
 
         setRunMenuItemsEnabled(true);
         //setJMenuBar(mbar);
-    }
-
-    /**
-     * Gives the Display the panel is on for purposes of manipulating it while the progam is running.
-     * @return the GridPanel the JFrame is displayed on
-     */
-    public GridPanel getDisplay()
-    {
-        return display;
     }
 
     private void makeNewGridMenu()

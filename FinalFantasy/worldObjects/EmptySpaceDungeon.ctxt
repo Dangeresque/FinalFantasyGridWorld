@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=p
 comment0.target=void\ interact(RPGGrid.actor.ThePlayer)
-comment0.text=\r\n\ Moves\ the\ player\ to\ its\ location,\ and\ has\ a\ random\ chance\r\n\ of\ initiating\ a\ battle\ with\ an\ monster\ when\ called.\r\n\ @param\ p\ The\ player\ to\ move\ and\ potentialy\ add\ to\ a\ battle\r\n
+comment0.text=\r\n\ Moves\ the\ player\ to\ its\ location,\ and\ has\ a\ random\ chance\r\n\ of\ initiating\ a\ battle\ with\ an\ monster\ when\ called.\r\n\ @param\ p\ The\ player\ to\ move,\ and\ potentialy\ add\ to\ a\ battle\r\n
 numComments=1

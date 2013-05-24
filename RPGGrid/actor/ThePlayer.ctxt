@@ -1,12 +1,13 @@
 #BlueJ class context
 comment0.params=w\ c
 comment0.target=ThePlayer(RPGGrid.world.RPGWorld,\ FinalFantasy.FFCharacter)
-comment0.text=\r\n\ Constructs\ a\ player\ with\ a\ reference\ to\ a\ given\ world,\ and\ removes\ any\ color\r\n\ filters\r\n\ @param\ a\ RPGWorld\ for\ the\ player\ to\ reference\r\n
+comment0.text=\r\n\ Constructs\ a\ player\ with\ a\ reference\ to\ a\ given\ world,\ and\ removes\ any\ color\r\n\ filters\r\n\ @param\ a\ RPGWorld\ for\ the\ player\ to\ reference\r\n\ @param\ c\ The\ FFCharacter\ attached\ to\ the\ player\r\n
 comment1.params=
 comment1.target=FinalFantasy.FFCharacter\ getFFCharacter()
 comment1.text=\r\n\ Gives\ the\ Character\ reperesented\ by\ ThePlayer.\r\n\ @return\ the\ Character\ stored\ in\ ThePlayer\r\n
 comment2.params=
 comment2.target=RPGGrid.world.RPGWorld\ getWorld()
+comment2.text=\r\n\ Returns\ the\ world\ the\ player\ is\ in.\r\n\ @return\ the\ world\ that\ contains\ the\ player\r\n
 comment3.params=
 comment3.target=void\ up()
 comment3.text=\r\n\ Causes\ the\ player\ to\ interact\ with\ the\ WorldObject\ above\ it,\r\n\ moves\ the\ camera\ if\ necisary,\ and\ changes\ the\ icon\ of\ the\ player.\r\n

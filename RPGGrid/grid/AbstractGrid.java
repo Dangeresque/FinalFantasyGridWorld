@@ -55,7 +55,7 @@ public abstract class AbstractGrid<E> implements Grid<E>
 
     /**
      * Gives the player in the grid.
-     * @return null
+     * @return null to avoid errors
      */
     public ThePlayer getThePlayer()
     {

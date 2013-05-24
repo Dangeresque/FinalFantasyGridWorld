@@ -7,4 +7,5 @@ comment1.target=void\ interact(RPGGrid.actor.ThePlayer)
 comment1.text=\r\n\ Allows\ the\ player\ to\ pass\ through\ it\ if\ the\ player\ has\ its\ key.\r\n\ @param\ p\ the\ player\ who\ is\ trying\ to\ pass\ through\ the\ door\r\n
 comment2.params=p
 comment2.target=java.util.ArrayList\ getKeys(RPGGrid.actor.ThePlayer)
+comment2.text=\r\n\ Gets\ an\ ArrayList\ of\ items\ which\ are\ all\ keys\ so\ interact()\r\n\ can\ more\ efficiently\ find\ out\ if\ the\ player\ has\ the\ key.\r\n\ @param\ p\ the\ player\ to\ search\ the\ inventory\ of\r\n
 numComments=3

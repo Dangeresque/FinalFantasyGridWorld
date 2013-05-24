@@ -1,16 +1,16 @@
 #BlueJ package file
 package.editor.height=396
 package.editor.width=708
-package.editor.x=263
-package.editor.y=312
+package.editor.x=534
+package.editor.y=326
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
 target1.editor.height=900
 target1.editor.width=818
-target1.editor.x=0
-target1.editor.y=0
+target1.editor.x=342
+target1.editor.y=6
 target1.height=50
 target1.name=RPGListner
 target1.naviview.expanded=false

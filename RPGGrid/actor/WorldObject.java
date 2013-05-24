@@ -1,7 +1,9 @@
 package RPGGrid.actor;
+
 /**
  * A <code>WorldObject</code> is an implementation of Interactive that provides a default interact method
  * which does not do anything and is ideal for use as an obstacle for the player or a Interactive placeholder.
+ * @author Sean MacLane
  * <br />
  */
 public class WorldObject extends Actor implements Interactive
@@ -12,6 +14,6 @@ public class WorldObject extends Actor implements Interactive
      */
     public void interact(ThePlayer p)
     {
-        
+
     }
 }

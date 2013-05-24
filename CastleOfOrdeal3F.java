@@ -14,12 +14,23 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
+/**
+ * This is the driver that runs the level Castle Of Ordeal (third floor) from
+ * Final Fantasy 1.
+ * @author Sean MacLane
+ */
 public class CastleOfOrdeal3F
 {
     private RPGWorld world;
     private static File f;
     private static SoundPlayer s;
 
+    /**
+     * This sets up everything needed for a new game (a grid, a world, 
+     * a .wav file, a SoundPlayer, the locations of objects in the grid, 
+     * the player, the key listner, and the intial position of the "camera" 
+     * looking at the grid.
+     */
     public static void main(String[] args)
     {
         double ran = Math.random();

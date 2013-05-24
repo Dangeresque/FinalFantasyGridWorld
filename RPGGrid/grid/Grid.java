@@ -1,5 +1,5 @@
 /*
- * This is identicle to Grid in grid world, save for the fact that getJFrame() has been added.
+ * This is identicle to Grid in grid world, save for the fact that getThePlayer() has been added.
  */
 
 /* 

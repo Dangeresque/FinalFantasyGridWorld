@@ -10,4 +10,5 @@ comment2.target=void\ setStrength(int)
 comment2.text=\r\n\ The\ accessor\ method\ for\ the\ Armor's\ <code>strength</code>.\r\n\ \r\n\ @param\ \ str\ \ the\ armor's\ strength\r\n
 comment3.params=
 comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ Gives\ the\ type\ of\ item\ along\ with\ its\ unique\ value\r\n\ @return\ a\ String\ describing\ the\ item\r\n
 numComments=4

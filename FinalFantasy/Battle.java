@@ -1,13 +1,14 @@
 package FinalFantasy;
 
 import RPGGrid.world.*;
+import RPGGrid.grid.*;
 
 import java.util.*;
 import java.io.*;
 /**
  * Represents a battle between the character and an enemy
  * 
- * @author Shonee A. Freed-Doerr 
+ * @author Shonee A. Freed-Doerr and Sean MacLane
  * @version 1.0.0
  */
 public class Battle {
@@ -17,9 +18,11 @@ public class Battle {
     private RPGWorld world;
 
     /**
-     * Constructor for objects of class Battle
+     * Constructor for objects of class Battle and clears 
+     * the terminal.
      * 
      * @param  c  the player Character
+     * @param w The RPGWorld the battle takes place in
      */
     public Battle(FFCharacter c, RPGWorld w)
     {
@@ -66,7 +69,12 @@ public class Battle {
                 damVal = 1;
                 System.out.println("A glancing blow.");
             } else {
-                System.out.println("The blow failed to injure the enemy!");
+                System.out.print("The blow failed to injure ");
+                if(chara) {
+                    System.out.println("the enemy!");
+                } else {
+                    System.out.println("you!");
+                }
             }
         } else if (attackVal == defenseVal) {
             if (Math.random() <= 0.8) {
@@ -74,7 +82,12 @@ public class Battle {
                 damVal = 2;
                 System.out.println("A light blow.");
             } else {
-                System.out.println("The blow failed to injure the enemy!");
+                System.out.print("The blow failed to injure ");
+                if(chara) {
+                    System.out.println("the enemy!");
+                } else {
+                    System.out.println("you!");
+                }
             }
         } else if (attackVal > defenseVal) {
             if (Math.random() >= 0.95) {
@@ -82,7 +95,12 @@ public class Battle {
                 defender.setHealth(defender.getHealth()-damVal);
                 System.out.println("A strong hit!");
             } else {
-                System.out.println("The blow failed to injure the enemy!");
+                System.out.print("The blow failed to injure ");
+                if(chara) {
+                    System.out.println("the enemy!");
+                } else {
+                    System.out.println("you!");
+                }
             }
         }
         if (chara) {
@@ -119,11 +137,26 @@ public class Battle {
     }
 
     /**
-     * Ends the battle.
+     * Lose the battle, keeps the player from playing after death by
+     * throwing a null pointer exception.
+     */
+    public void youLose() {
+        RPGGrid g = (RPGGrid) world.getGrid();
+        //throws epic intentional error
+        g.killThePlayer();
+        world.setBattle(null);
+        System.out.println("You lost the battle!");
+        System.out.println("As you slowly die, you see the words 'null pointer exception'");
+    }
+
+    /**
+     * Wins the battle.
      */
     public void endBattle() {
+        character.addBattle();
+        character.levelUpCheck();
         world.setBattle(null);
-        System.out.println("The Battle is over");
+        System.out.println("You won the battle!");
     }
 
     /**
@@ -132,7 +165,6 @@ public class Battle {
      * @param  choice  the player's choice of action
      */
     public void turn(int choice) {
-        System.out.println("turn started with " + choice);
         if(choice == 0) {
             attack(true);
         } else if (choice == 1) {
@@ -146,9 +178,9 @@ public class Battle {
         } else {
             attack(false);
         }
-        if (enemy.getHealth() <= 0) {
+        if (character.getHealth() <= 0) {
             System.out.println("Thou hast been defeated!");
-            endBattle();
+            youLose();
         }
     }
 
@@ -156,7 +188,6 @@ public class Battle {
      * Chooses the spell the character will use.
      */
     public void chooseSpell() {
-        //Sean, I need a way for them to choose their spell. For now:
         ArrayList<Spell> spells = character.getSpells();
         if(spells.size() != 0) {
             int index = (int) (Math.random()) * spells.size();

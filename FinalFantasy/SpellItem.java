@@ -19,14 +19,26 @@ public class SpellItem implements Item {
         spell = s;
     }
 
+    /**
+     * Returns the Spell contained in the SpellItem
+     * @return the Spell in the SpellItem
+     */
     public Spell getSpell() {
         return spell;
     }
 
+    /**
+     * Sets the Spell in the SpellItem to a new spell
+     * @param s The Spell to put in the SpellItem
+     */
     public void setSpell(Spell s) {
         spell = s;
     }
 
+    /**
+     * Gives the type of item along with its unique value
+     * @return a String describing the item
+     */
     public String toString() {
         String ret = "Spell " + spell;
         return ret;

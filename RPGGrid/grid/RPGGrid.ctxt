@@ -8,4 +8,6 @@ comment1.text=\r\n\ Sets\ the\ occupants\ of\ the\ grid\ to\ a\ pre-defined\ arr
 comment2.params=
 comment2.target=RPGGrid.actor.ThePlayer\ getThePlayer()
 comment2.text=\r\n\ Finds\ the\ player\ in\ the\ grid.\r\n\ @return\ the\ first\ instance\ of\ ThePlayer\ in\ the\ grid\r\n
-numComments=3
+comment3.params=
+comment3.target=void\ killThePlayer()
+numComments=4

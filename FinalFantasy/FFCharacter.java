@@ -11,13 +11,11 @@ public class FFCharacter extends FFActor
 {
     // instance variables
     private String name;
-    private KeyReader reader;
     private ArrayList<Item> inventory;
     private Armor armor;
     private Weapon weapon;
     private ArrayList<Spell> spells;
     private int battles;
-
     /**
      * Generic constructor for objects of class Character
      */
@@ -25,7 +23,6 @@ public class FFCharacter extends FFActor
         // initialise instance variables
         super(1,5,5,7);
         name = "testName";
-        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
         battles = 0;
@@ -42,7 +39,6 @@ public class FFCharacter extends FFActor
         // initialise instance variables
         super(lvl,5,5,7);
         name = n;
-        reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
         battles = 0;
@@ -62,7 +58,7 @@ public class FFCharacter extends FFActor
      * 
      * @return     the character's inventory
      */
-    public ArrayList getInventory() {
+    public ArrayList<Item> getInventory() {
         return inventory;
     }
 
@@ -79,7 +75,7 @@ public class FFCharacter extends FFActor
     /**
      * Takes an item to the inventory
      * 
-     * @param ind  index of the item to be removed from the inventory
+     * @param  ind  index of the item to be removed from the inventory
      */
     public Item takeItem(int ind) {
         Item i = inventory.get(ind);
@@ -161,6 +157,9 @@ public class FFCharacter extends FFActor
         battles++;
     }
 
+    /**
+     * checks if a level up should happen.
+     */
     public void levelUpCheck() {
         if(battles >= (getLevel()*2)) {
             battles = 0;

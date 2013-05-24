@@ -1,5 +1,5 @@
 /*
- * This class is unchanged from grid world.
+ * This class is unchanged from grid world, except the background color has been changed to Black.
  */
 
 /* 
@@ -57,6 +57,10 @@ public class PseudoInfiniteViewport extends JViewport
 
     /**
      * Construct a new PseudoInfiniteViewport object for the given scrollpane.
+     * 
+     * This has been modified by Sean MacLane to set the background color of
+     * the grid to Black.
+     * 
      * @param parent the JScrollPane for which this will be the viewport
      */
     public PseudoInfiniteViewport(JScrollPane parent)
@@ -73,8 +77,8 @@ public class PseudoInfiniteViewport extends JViewport
     public void setViewPosition(Point pt)
     {
         boolean isAdjusting = scrollParent.getVerticalScrollBar()
-                .getValueIsAdjusting()
-                || scrollParent.getHorizontalScrollBar().getValueIsAdjusting();
+            .getValueIsAdjusting()
+            || scrollParent.getHorizontalScrollBar().getValueIsAdjusting();
         boolean changed = true;
 
         if (viewIsUnbounded())
@@ -111,7 +115,7 @@ public class PseudoInfiniteViewport extends JViewport
     public Point getViewPosition()
     {
         return (viewIsUnbounded() ? getPanCenterPoint() : super
-                .getViewPosition());
+            .getViewPosition());
     }
 
     /**
@@ -121,7 +125,7 @@ public class PseudoInfiniteViewport extends JViewport
     public Dimension getViewSize()
     {
         return (viewIsUnbounded() ? getView().getPreferredSize() : super
-                .getViewSize());
+            .getViewSize());
     }
 
     // some simple private helpers

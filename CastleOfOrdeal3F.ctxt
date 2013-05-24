@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=args
 comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ This\ sets\ up\ everything\ needed\ for\ a\ new\ game\ (a\ grid,\ a\ world,\ \r\n\ a\ .wav\ file,\ a\ SoundPlayer,\ the\ locations\ of\ objects\ in\ the\ grid,\ \r\n\ the\ player,\ the\ key\ listner,\ and\ the\ intial\ position\ of\ the\ "camera"\ \r\n\ looking\ at\ the\ grid.\r\n
 numComments=1

@@ -1,14 +1,17 @@
 #BlueJ class context
 comment0.params=grid\ sound
 comment0.target=RPGWorld(RPGGrid.grid.Grid,\ RPGGrid.input.SoundPlayer)
-comment0.text=\r\n\ Constructs\ a\ RPGWorld\ with\ a\ given\ grid.\r\n\ @param\ grid\ the\ grid\ which\ the\ RPGWorld\ will\ contain\r\n
+comment0.text=\r\n\ Constructs\ a\ RPGWorld\ with\ a\ given\ grid.\r\n\ @param\ grid\ The\ grid\ which\ the\ RPGWorld\ will\ contain\r\n\ @param\ sound\ The\ sound\ player\ which\ will\ play\ the\ music\r\n
 comment1.params=
 comment1.target=FinalFantasy.Battle\ getBattle()
+comment1.text=\r\n\ Gets\ the\ battle\ that\ is\ happening\ in\ the\ grid.\r\n\ @return\ the\ Battle\ in\ the\ grid\r\n
 comment2.params=b
 comment2.target=void\ setBattle(FinalFantasy.Battle)
+comment2.text=\r\n\ Sets\ batt\ to\ a\ new\ Battle\r\n\ @param\ b\ The\ new\ battle\ to\ take\ place\ in\ the\ world\r\n
 comment3.params=
 comment3.target=RPGGrid.input.SoundPlayer\ getSoundPlayer()
+comment3.text=\r\n\ Returns\ the\ SoundPlayer\ for\ this\ world.\r\n\ @return\ the\ current\ SoundPlayer\r\n
 comment4.params=loc\ occupant
 comment4.target=void\ add(RPGGrid.grid.Location,\ RPGGrid.actor.Actor)
-comment4.text=\r\n\ Adds\ an\ actor\ to\ the\ grid\ at\ a\ given\ location.\r\n\ @param\ loc\:\ the\ location\ to\ add\ the\ actor\ to\r\n\ @param\ occupant\:\ the\ Actor\ to\ add\ to\ the\ grid\r\n
+comment4.text=\r\n\ This\ method\ was\ written\ by\ the\ College\ Board\ for\ ActorWorld.\r\n\ \r\n\ Adds\ an\ actor\ to\ the\ grid\ at\ a\ given\ location.\r\n\ @param\ loc\:\ the\ location\ to\ add\ the\ actor\ to\r\n\ @param\ occupant\:\ the\ Actor\ to\ add\ to\ the\ grid\r\n
 numComments=5

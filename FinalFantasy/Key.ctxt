@@ -7,4 +7,5 @@ comment1.target=java.lang.String\ getName()
 comment1.text=\r\n\ Gives\ the\ name\ (likeley\ to\ the\ door).\r\n\ @return\ the\ name\ stored\ in\ the\ Key\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ Gives\ the\ type\ of\ item\ along\ with\ its\ unique\ value\r\n\ @return\ a\ String\ describing\ the\ item\r\n
 numComments=3

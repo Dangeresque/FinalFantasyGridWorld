@@ -39,6 +39,10 @@ public class Weapon implements Item {
         power = pwr;
     }
 
+    /**
+     * Gives the type of item along with its unique value
+     * @return a String describing the item
+     */
     public String toString() {
         String ret = "Weapon " + power;
         return ret;

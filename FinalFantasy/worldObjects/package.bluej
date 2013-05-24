@@ -1,8 +1,8 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=643
-package.editor.y=127
+package.editor.x=-99
+package.editor.y=452
 package.numDependencies=0
 package.numTargets=7
 package.showExtends=true
@@ -21,8 +21,8 @@ target1.x=280
 target1.y=20
 target2.editor.height=700
 target2.editor.width=900
-target2.editor.x=493
-target2.editor.y=106
+target2.editor.x=208
+target2.editor.y=39
 target2.height=50
 target2.name=Door
 target2.naviview.expanded=true

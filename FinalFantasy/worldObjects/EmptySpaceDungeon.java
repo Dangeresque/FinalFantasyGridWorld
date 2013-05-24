@@ -16,7 +16,7 @@ public class EmptySpaceDungeon extends WorldObject
     /**
      * Moves the player to its location, and has a random chance
      * of initiating a battle with an monster when called.
-     * @param p The player to move and potentialy add to a battle
+     * @param p The player to move, and potentialy add to a battle
      */
     public void interact(ThePlayer p) {
         p.moveTo(getLocation());
