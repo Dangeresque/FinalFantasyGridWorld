@@ -9,6 +9,7 @@ import java.util.ArrayList;
 /**
  * A <code>Door<code> turns into empty space if the player interacting
  * with it has the door's key in its inventory.
+ * @author Sean MacLane
  */
 public class Door extends WorldObject {
     // have constructor with key (item) name

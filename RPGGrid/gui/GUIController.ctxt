@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=parent\ disp\ displayMap\ res
 comment0.target=GUIController(WorldFrame,\ GridPanel,\ DisplayMap,\ java.util.ResourceBundle)
-comment0.text=\r\n\ Creates\ a\ new\ controller\ tied\ to\ the\ specified\ display\ and\ gui\r\n\ frame.\r\n\ \r\n\ This\ has\ been\ modified\ by\ Sean\ MacLane\ to\ ignore\ mouse\ input,\ \r\n\ preventing\ users\ from\ cheating\ while\ playing\ an\ RPG\ game\ by\ calling\r\n\ methods\ on\ the\ grid\ at\ unintended\ times.\r\n\ \r\n\ @param\ parent\ the\ frame\ for\ the\ world\ window\r\n\ @param\ disp\ the\ panel\ that\ displays\ the\ grid\r\n\ @param\ displayMap\ the\ map\ for\ occupant\ displays\r\n\ @param\ res\ the\ resource\ bundle\ for\ message\ display\r\n
+comment0.text=\r\n\ Creates\ a\ new\ controller\ tied\ to\ the\ specified\ display\ and\ gui\r\n\ frame.\r\n\ \r\n\ This\ has\ been\ modified\ to\ ignore\ mouse\ input,\ \r\n\ preventing\ users\ from\ cheating\ while\ playing\ an\ RPG\ game\ by\ calling\r\n\ methods\ on\ the\ grid\ at\ unintended\ times.\r\n\ \r\n\ @param\ parent\ the\ frame\ for\ the\ world\ window\r\n\ @param\ disp\ the\ panel\ that\ displays\ the\ grid\r\n\ @param\ displayMap\ the\ map\ for\ occupant\ displays\r\n\ @param\ res\ the\ resource\ bundle\ for\ message\ display\r\n
 comment1.params=a\ b
 comment1.target=int\ compare(java.lang.Class,\ java.lang.Class)
 comment10.params=e
@@ -35,7 +35,7 @@ comment5.params=occupant
 comment5.target=void\ addOccupant(java.lang.Object)
 comment6.params=
 comment6.target=void\ run()
-comment6.text=\r\n\ Starts\ a\ timer\ to\ repeatedly\ carry\ out\ steps\ at\ the\ speed\ currently\r\n\ indicated\ by\ the\ speed\ slider\ up\ Depending\ on\ the\ run\ option,\ it\ will\r\n\ either\ carry\ out\ steps\ for\ some\ fixed\ number\ or\ indefinitely\r\n\ until\ stopped.\r\n\ \r\n\ This\ has\ been\ modified\ by\ Sean\ MacLane\ to\ re\ hide\ the\ tool\ tips\r\n\ every\ turn\ to\ prevent\ them\ from\ reverting\ to\ true\ after\ a\ grids\ \r\n\ construction.\r\n\ \r\n
+comment6.text=\r\n\ Starts\ a\ timer\ to\ repeatedly\ carry\ out\ steps\ at\ the\ speed\ currently\r\n\ indicated\ by\ the\ speed\ slider\ up\ Depending\ on\ the\ run\ option,\ it\ will\r\n\ either\ carry\ out\ steps\ for\ some\ fixed\ number\ or\ indefinitely\r\n\ until\ stopped.\r\n\ \r\n\ This\ has\ been\ modified\ to\ re\ hide\ the\ tool\ tips\r\n\ every\ turn\ to\ prevent\ them\ from\ reverting\ to\ true\ after\ a\ grids\ \r\n\ construction.\r\n\ \r\n
 comment7.params=
 comment7.target=void\ stop()
 comment7.text=\r\n\ Stops\ any\ existing\ timer\ currently\ carrying\ out\ steps.\r\n
@@ -43,5 +43,5 @@ comment8.params=
 comment8.target=boolean\ isRunning()
 comment9.params=
 comment9.target=void\ makeControls()
-comment9.text=\r\n\ Builds\ the\ panel\ with\ the\ various\ controls\ (buttons\ and\r\n\ slider).\r\n\ \r\n\ This\ has\ been\ modified\ by\ Sean\ MacLane\ to\ remove\ all\ buttons,\r\n\ button\ areas,\ and\ borders\ from\ the\ user\ interface\ to\ provide\r\n\ a\ cleaner\ look\ than\ Grid\ World.\r\n\ \r\n
+comment9.text=\r\n\ Builds\ the\ panel\ with\ the\ various\ controls\ (buttons\ and\r\n\ slider).\r\n\ \r\n\ This\ has\ been\ modified\ to\ remove\ all\ buttons,\r\n\ button\ areas,\ and\ borders\ from\ the\ user\ interface\ to\ provide\r\n\ a\ cleaner\ look\ than\ Grid\ World.\r\n\ \r\n
 numComments=18

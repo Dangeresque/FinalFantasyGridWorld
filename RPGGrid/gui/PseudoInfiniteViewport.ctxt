@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=parent
 comment0.target=PseudoInfiniteViewport(javax.swing.JScrollPane)
-comment0.text=\r\n\ Construct\ a\ new\ PseudoInfiniteViewport\ object\ for\ the\ given\ scrollpane.\r\n\ \r\n\ This\ has\ been\ modified\ by\ Sean\ MacLane\ to\ set\ the\ background\ color\ of\r\n\ the\ grid\ to\ Black.\r\n\ \r\n\ @param\ parent\ the\ JScrollPane\ for\ which\ this\ will\ be\ the\ viewport\r\n
+comment0.text=\r\n\ Construct\ a\ new\ PseudoInfiniteViewport\ object\ for\ the\ given\ scrollpane.\r\n\ \r\n\ This\ has\ been\ modified\ to\ set\ the\ background\ color\ of\r\n\ the\ grid\ to\ Black.\r\n\ \r\n\ @param\ parent\ the\ JScrollPane\ for\ which\ this\ will\ be\ the\ viewport\r\n
 comment1.params=pt
 comment1.target=void\ setViewPosition(java.awt.Point)
 comment1.text=\r\n\ Sets\ the\ view\ position\ (upper\ left)\ to\ a\ new\ point.\ Overridden\ from\r\n\ JViewport\ to\ do\ a\ pan,\ instead\ of\ scroll,\ on\ an\ unbounded\ view.\r\n\ @param\ pt\ the\ Point\ to\ become\ the\ upper\ left\r\n

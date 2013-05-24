@@ -5,6 +5,7 @@ import RPGGrid.grid.*;
 
 /**
  * A <code>Portal<code> transports the player to a new grid.
+ * @author Sean MacLane
  */
 public class Portal extends WorldObject
 {

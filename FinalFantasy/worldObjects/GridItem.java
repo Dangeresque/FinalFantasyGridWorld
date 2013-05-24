@@ -6,6 +6,7 @@ import FinalFantasy.*;
 /**
  * A <code>GridItem<code> is an object on the grid that contains
  * items for the player to pick up.
+ * @author Sean MacLane
  */
 public class GridItem extends WorldObject {
     private Item containedItem;

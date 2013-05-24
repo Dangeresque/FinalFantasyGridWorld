@@ -94,7 +94,7 @@ PseudoInfiniteViewport.Pannable
      * Construct a new GridPanel object with no grid. The view will be
      * empty.
      * 
-     * This has been modified by Sean MacLane to remove tooltips from
+     * This has been modified to remove tooltips from
      * the grid.
      */
     public GridPanel(DisplayMap map, ResourceBundle res)
@@ -107,7 +107,7 @@ PseudoInfiniteViewport.Pannable
     /**
      * Paint this component.
      * 
-     * This method has been modified by Sean MacLane to remove the
+     * This method has been modified to remove the
      * watermark, gridline, and current location selector box from
      * Grid World.
      * 

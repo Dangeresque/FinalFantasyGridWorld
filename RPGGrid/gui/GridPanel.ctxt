@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=map\ res
 comment0.target=GridPanel(DisplayMap,\ java.util.ResourceBundle)
-comment0.text=\r\n\ Construct\ a\ new\ GridPanel\ object\ with\ no\ grid.\ The\ view\ will\ be\r\n\ empty.\r\n\ \r\n\ This\ has\ been\ modified\ by\ Sean\ MacLane\ to\ remove\ tooltips\ from\r\n\ the\ grid.\r\n
+comment0.text=\r\n\ Construct\ a\ new\ GridPanel\ object\ with\ no\ grid.\ The\ view\ will\ be\r\n\ empty.\r\n\ \r\n\ This\ has\ been\ modified\ to\ remove\ tooltips\ from\r\n\ the\ grid.\r\n
 comment1.params=g
 comment1.target=void\ paintComponent(java.awt.Graphics)
-comment1.text=\r\n\ Paint\ this\ component.\r\n\ \r\n\ This\ method\ has\ been\ modified\ by\ Sean\ MacLane\ to\ remove\ the\r\n\ watermark,\ gridline,\ and\ current\ location\ selector\ box\ from\r\n\ Grid\ World.\r\n\ \r\n\ The\ indicated\ lines\ were\ written\ by\ and\ un-named\ teacher\ in\ the\ \r\n\ Winston-Salem/Forsyth\ County\ School\ district\ (I\ couldnt\ figure\ out\r\n\ which\ teacher\ it\ was,\ the\ power\ point\ wasn't\ on\ a\ specific\ teachers\r\n\ page,\ and\ contained\ no\ information\ as\ to\ an\ author),\ and\ has\ been\r\n\ implemented\ to\ display\ an\ image\ in\ the\ back\ of\ a\ grid.\r\n\ \r\n\ @param\ g\ the\ Graphics\ object\ to\ use\ to\ render\ this\ component\r\n
+comment1.text=\r\n\ Paint\ this\ component.\r\n\ \r\n\ This\ method\ has\ been\ modified\ to\ remove\ the\r\n\ watermark,\ gridline,\ and\ current\ location\ selector\ box\ from\r\n\ Grid\ World.\r\n\ \r\n\ The\ indicated\ lines\ were\ written\ by\ and\ un-named\ teacher\ in\ the\ \r\n\ Winston-Salem/Forsyth\ County\ School\ district\ (I\ couldnt\ figure\ out\r\n\ which\ teacher\ it\ was,\ the\ power\ point\ wasn't\ on\ a\ specific\ teachers\r\n\ page,\ and\ contained\ no\ information\ as\ to\ an\ author),\ and\ has\ been\r\n\ implemented\ to\ display\ an\ image\ in\ the\ back\ of\ a\ grid.\r\n\ \r\n\ @param\ g\ the\ Graphics\ object\ to\ use\ to\ render\ this\ component\r\n
 comment10.params=
 comment10.target=int\ extraHeight()
 comment11.params=

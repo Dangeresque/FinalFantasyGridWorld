@@ -58,7 +58,7 @@ public class PseudoInfiniteViewport extends JViewport
     /**
      * Construct a new PseudoInfiniteViewport object for the given scrollpane.
      * 
-     * This has been modified by Sean MacLane to set the background color of
+     * This has been modified to set the background color of
      * the grid to Black.
      * 
      * @param parent the JScrollPane for which this will be the viewport

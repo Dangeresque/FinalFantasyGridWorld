@@ -9,6 +9,7 @@ import RPGGrid.input.*;
  * An <code>EmptySpaceDungeon<code> moves the player to its location,
  * and thus enableing movement of the player, and has a random
  * chance to initiate a battle.
+ * @author Sean MacLane
  */
 public class EmptySpaceDungeon extends WorldObject
 {

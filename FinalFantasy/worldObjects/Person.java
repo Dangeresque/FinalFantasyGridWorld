@@ -4,6 +4,7 @@ import RPGGrid.actor.*;
 
 /**
  * A <code>Person<code> tells the user something in a println.
+ * @author Sean MacLane
  */
 public class Person extends WorldObject {
     String message;

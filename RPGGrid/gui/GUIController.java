@@ -71,7 +71,7 @@ public class GUIController<T>
      * Creates a new controller tied to the specified display and gui
      * frame.
      * 
-     * This has been modified by Sean MacLane to ignore mouse input, 
+     * This has been modified to ignore mouse input, 
      * preventing users from cheating while playing an RPG game by calling
      * methods on the grid at unintended times.
      * 
@@ -168,7 +168,7 @@ public class GUIController<T>
      * either carry out steps for some fixed number or indefinitely
      * until stopped.
      * 
-     * This has been modified by Sean MacLane to re hide the tool tips
+     * This has been modified to re hide the tool tips
      * every turn to prevent them from reverting to true after a grids 
      * construction.
      * 
@@ -208,7 +208,7 @@ public class GUIController<T>
      * Builds the panel with the various controls (buttons and
      * slider).
      * 
-     * This has been modified by Sean MacLane to remove all buttons,
+     * This has been modified to remove all buttons,
      * button areas, and borders from the user interface to provide
      * a cleaner look than Grid World.
      * 
