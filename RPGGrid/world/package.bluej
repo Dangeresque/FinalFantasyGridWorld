@@ -1,16 +1,16 @@
 #BlueJ package file
 package.editor.height=150
 package.editor.width=310
-package.editor.x=619
-package.editor.y=271
+package.editor.x=233
+package.editor.y=299
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
-target1.editor.height=816
+target1.editor.height=800
 target1.editor.width=1296
-target1.editor.x=-8
-target1.editor.y=-8
+target1.editor.x=99
+target1.editor.y=23
 target1.height=50
 target1.name=RPGWorld
 target1.naviview.expanded=false

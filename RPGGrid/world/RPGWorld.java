@@ -3,6 +3,8 @@
  */
 package RPGGrid.world;
 
+import FinalFantasy.*;
+
 import RPGGrid.grid.Grid;
 import RPGGrid.grid.Location;
 import RPGGrid.actor.*;
@@ -15,8 +17,9 @@ import RPGGrid.input.*;
  */
 public class RPGWorld extends World<Actor>
 {      
-    SoundPlayer s;
-    
+    private SoundPlayer s;
+    private Battle batt;
+
     /**
      * Constructs a RPGWorld with a given grid.
      * @param grid the grid which the RPGWorld will contain
@@ -24,10 +27,20 @@ public class RPGWorld extends World<Actor>
     public RPGWorld(Grid<Actor> grid, SoundPlayer sound)
     {
         super(grid);
-        
+
         s = sound;
     }
-    
+
+    public Battle getBattle()
+    {
+        return batt;
+    }
+
+    public void setBattle(Battle b)
+    {
+        batt = b;
+    }
+
     public SoundPlayer getSoundPlayer()
     {
         return s;

@@ -1,6 +1,5 @@
 package FinalFantasy;
 
-
 /**
  * Write a description of class Spell here.
  * 
@@ -21,8 +20,9 @@ public class Spell {
     {
         // initialise instance variables
         name = n;
-        damage = 10;
+        damage = 5;
     }
+
     /**
      * The accessor method for the Spell's name.
      * 
@@ -32,6 +32,7 @@ public class Spell {
     {
         return name;
     }
+
     /**
      * The accessor method for the Spell's damage.
      * 
@@ -40,6 +41,7 @@ public class Spell {
     public int getDamage() {
         return damage;
     }
+
     /**
      * The mutator method for the Spell's name.
      * 
@@ -49,6 +51,7 @@ public class Spell {
     {
         name = n;
     }
+
     /**
      * The mutator method for the Spell's damage.
      * 

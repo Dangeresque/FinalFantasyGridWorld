@@ -5,4 +5,6 @@ comment0.text=\r\n\ Constructs\ a\ key\ with\ the\ name\ needed\ to\ open\ a\ pa
 comment1.params=
 comment1.target=java.lang.String\ getName()
 comment1.text=\r\n\ Gives\ the\ name\ (likeley\ to\ the\ door).\r\n\ @return\ the\ name\ stored\ in\ the\ Key\r\n
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

@@ -8,4 +8,6 @@ comment1.text=\r\n\ The\ accessor\ method\ for\ the\ weapon's\ power\r\n\ \r\n\ 
 comment2.params=pwr
 comment2.target=void\ setPower(int)
 comment2.text=\r\n\ The\ mutator\ method\ for\ the\ weapon's\ power\r\n\ \r\n\ @param\ \ pwr\ \ the\ weapon's\ power\r\n
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

@@ -24,4 +24,8 @@ public class Key implements Item
     {
         return name;
     }
+    
+        public String toString() {
+        return "Key " + name;
+    }
 }

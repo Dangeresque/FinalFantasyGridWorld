@@ -16,6 +16,7 @@ public class FFCharacter extends FFActor
     private Armor armor;
     private Weapon weapon;
     private ArrayList<Spell> spells;
+    private int battles;
 
     /**
      * Generic constructor for objects of class Character
@@ -27,7 +28,9 @@ public class FFCharacter extends FFActor
         reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
+        battles = 0;
     }
+
     /**
      * Parametric constructor for objects of class Character
      * 
@@ -42,7 +45,9 @@ public class FFCharacter extends FFActor
         reader = new KeyReader();
         inventory = new ArrayList<Item>();
         spells = new ArrayList<Spell>();
+        battles = 0;
     }
+
     /**
      * The accessor method for the <code>name</code> instance variable.
      * 
@@ -51,6 +56,7 @@ public class FFCharacter extends FFActor
     public String getName() {
         return name;
     }
+
     /**
      * The accessor method for the Character's inventory.
      * 
@@ -59,6 +65,7 @@ public class FFCharacter extends FFActor
     public ArrayList getInventory() {
         return inventory;
     }
+
     /**
      * Adds an item to the inventory
      * 
@@ -66,7 +73,9 @@ public class FFCharacter extends FFActor
      */
     public void giveItem(Item i) {
         inventory.add(i);
+        System.out.println("Placed " + i.toString() + " in the inventory.");
     }
+
     /**
      * Takes an item to the inventory
      * 
@@ -75,36 +84,49 @@ public class FFCharacter extends FFActor
     public Item takeItem(int ind) {
         Item i = inventory.get(ind);
         inventory.remove(ind);
+        System.out.println("Removed " + i.toString() + " from the inventory.");
         return i;
     }
+
     /**
      * Wears new armor. If armor is already equipped, the  old armor is placed n the inventory.
      * 
      * @param  arm  the character's armor
      */
     public void wear(Armor arm) {
-        if(armor != null)
+        if(armor != null) {
             inventory.add(armor);
+            System.out.println("Put away " + armor.toString() + ".");
+        }
         armor = arm;
+        System.out.println("Equipped " + armor.toString() + ".");
     }
+
     /**
      * Weilds a new weapon. If a weapon is already equipped, the old weapon is placed n the inventory.
      * 
      * @param  weap  the character's weapon
      */
     public void wield(Weapon weap) {
-        if(weapon != null)
+        if(weapon != null) {
             inventory.add(weapon);
+            System.out.println("Put away " + weapon.toString() + ".");
+        }
         weapon = weap;
+        System.out.println("Equipped " + weapon.toString() + ".");
     }
+
     /**
      * levels up the Character
      */
     public void levelUp() {
+        System.out.println("Level up!");
+        System.out.println("Your attack and defense have increased.");
         setLevel((byte) (getLevel()+1));
         updateAttack();
         updateDefense();
     }
+
     /**
      * The accessor method for the <code>Armor</code> that the Character wears.
      * 
@@ -113,6 +135,7 @@ public class FFCharacter extends FFActor
     public Armor getArmor() {
         return armor;
     }
+
     /**
      * The accessor method for the <code>Weapon</code> that the Character weilds.
      * 
@@ -121,6 +144,7 @@ public class FFCharacter extends FFActor
     public Weapon getWeapon() {
         return weapon;
     }
+
     /**
      * The accessor method for the ArrayList of the Character's spells.
      * 
@@ -128,5 +152,19 @@ public class FFCharacter extends FFActor
      */ 
     public ArrayList<Spell> getSpells() {
         return spells;
+    }
+
+    /**
+     * Adds one to the number of battles the character has completed.
+     */
+    public void addBattle() {
+        battles++;
+    }
+
+    public void levelUpCheck() {
+        if(battles >= (getLevel()*2)) {
+            battles = 0;
+            levelUp();
+        }
     }
 }

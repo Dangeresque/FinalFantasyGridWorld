@@ -18,10 +18,17 @@ public class SpellItem implements Item {
         // initialise instance variables
         spell = s;
     }
+
     public Spell getSpell() {
         return spell;
     }
+
     public void setSpell(Spell s) {
         spell = s;
+    }
+
+    public String toString() {
+        String ret = "Spell " + spell;
+        return ret;
     }
 }

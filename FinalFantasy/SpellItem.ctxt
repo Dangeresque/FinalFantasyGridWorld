@@ -6,4 +6,6 @@ comment1.params=
 comment1.target=Spell\ getSpell()
 comment2.params=s
 comment2.target=void\ setSpell(Spell)
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

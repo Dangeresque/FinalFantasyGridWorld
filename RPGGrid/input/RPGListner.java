@@ -12,7 +12,7 @@ import java.awt.event.KeyListener;
 public class RPGListner
 {
     RPGWorld world;
-    
+
     /**
      * Constructs a RPGListner that manages player input and hotkeys
      * in a given world.
@@ -30,23 +30,59 @@ public class RPGListner
 
                     if(k[KeyEvent.VK_W])
                     {
-                        world.getGrid().getThePlayer().up();
+                        if(world.getBattle() == null)
+                        {
+                            world.getGrid().getThePlayer().up();
+                        }
                     }
                     if(k[KeyEvent.VK_S])
                     {
-                        world.getGrid().getThePlayer().down();
+                        if(world.getBattle() == null)
+                        {
+                            world.getGrid().getThePlayer().down();
+                        }
                     }
                     if(k[KeyEvent.VK_A])
                     {
-                        world.getGrid().getThePlayer().left();
+                        if(world.getBattle() == null)
+                        {
+                            world.getGrid().getThePlayer().left();
+                        }
                     }
                     if(k[KeyEvent.VK_D])
                     {
-                        world.getGrid().getThePlayer().right();
+                        if(world.getBattle() == null)
+                        {
+                            world.getGrid().getThePlayer().right();
+                        }
                     }
                     if(k[KeyEvent.VK_E])
                     {
-                        System.out.println("Game menu not yet implemented.");
+                        if(world.getBattle() == null)
+                        {
+                            System.out.println("Game menu not yet implemented.");
+                        }
+                    }
+                    if(k[KeyEvent.VK_1])
+                    {
+                        if(world.getBattle() != null)
+                        {
+                            world.getBattle().turn(0);
+                        }
+                    }
+                    if(k[KeyEvent.VK_2])
+                    {
+                        if(world.getBattle() != null)
+                        {
+                            world.getBattle().turn(1);
+                        }
+                    }
+                    if(k[KeyEvent.VK_3])
+                    {
+                        if(world.getBattle() != null)
+                        {
+                            world.getBattle().turn(2);
+                        }
                     }
                 }
             });

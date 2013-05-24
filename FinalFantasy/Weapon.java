@@ -1,6 +1,5 @@
 package FinalFantasy;
 
-
 /**
  * The <code>Weapon</code> class represents weaponry.
  * 
@@ -21,6 +20,7 @@ public class Weapon implements Item {
         // initialise instance variables
         power = pwr;
     }
+
     /**
      * The accessor method for the weapon's power
      * 
@@ -29,6 +29,7 @@ public class Weapon implements Item {
     public int getPower() {
         return power;
     }
+
     /**
      * The mutator method for the weapon's power
      * 
@@ -36,5 +37,10 @@ public class Weapon implements Item {
      */
     public void setPower(int pwr) {
         power = pwr;
+    }
+
+    public String toString() {
+        String ret = "Weapon " + power;
+        return ret;
     }
 }

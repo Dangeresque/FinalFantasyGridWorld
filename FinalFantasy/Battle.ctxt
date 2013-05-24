@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=c
-comment0.target=Battle(FFCharacter)
+comment0.params=c\ w
+comment0.target=Battle(FFCharacter,\ RPGGrid.world.RPGWorld)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Battle\r\n\ \r\n\ @param\ \ c\ \ the\ player\ Character\r\n
 comment1.params=chara
 comment1.target=void\ attack(boolean)

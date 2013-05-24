@@ -18,12 +18,24 @@ public class CastleOfOrdeal3F
 {
     private RPGWorld world;
     private static File f;
-    
+    private static SoundPlayer s;
+
     public static void main(String[] args)
     {
-        f = new File("dungeon.wav");
-        SoundPlayer s = new SoundPlayer(f);
-        
+        double ran = Math.random();
+        if(ran < .3)
+        {
+            f = new File("dungeon.wav");
+            s = new SoundPlayer(f);
+        } else if (ran > .66)
+        {
+            f = new File("angel.wav");
+            s = new SoundPlayer(f);
+        } else {
+            f = new File("battle.wav");
+            s = new SoundPlayer(f);
+        }
+
         BufferedImage img = null;
 
         try
@@ -43,7 +55,7 @@ public class CastleOfOrdeal3F
                 world.add(new Location(r, c), new EmptySpaceDungeon());
             }
         }
-        
+
         //Door, GridItem, Obstacle, EmptySpaceTown, Person, EmptySpaceDungeon, Portal
 
         world.add(locs.get(0), new Obstacle());
@@ -232,12 +244,12 @@ public class CastleOfOrdeal3F
         Location playerLoc = new Location(19, 18);
         ThePlayer p = new ThePlayer(world, new FFCharacter());
         world.add(playerLoc, p);
-        
+
         world.show();
 
         RPGListner mover = new RPGListner(world);
         world.getJFrame().getDisplay().moveLocation(playerLoc.getRow(), playerLoc.getCol());
-        
+
         s.play();
     }
 }

@@ -20,6 +20,7 @@ public class Armor implements Item {
         // initialise instance variables
         strength = str;
     }
+
     /**
      * The accessor method for the Armor's <code>strength</code>.
      * 
@@ -28,6 +29,7 @@ public class Armor implements Item {
     public int getStrength() {
         return strength;
     }
+
     /**
      * The accessor method for the Armor's <code>strength</code>.
      * 
@@ -35,5 +37,10 @@ public class Armor implements Item {
      */
     public void setStrength(int str) {
         strength = str;
+    }
+
+    public String toString() {
+        String ret = "Armor " + strength;
+        return ret;
     }
 }
