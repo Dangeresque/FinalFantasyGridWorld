@@ -69,7 +69,6 @@ public class FFCharacter extends FFActor
      */
     public void giveItem(Item i) {
         inventory.add(i);
-        System.out.println("Placed " + i.toString() + " in the inventory.");
     }
 
     /**

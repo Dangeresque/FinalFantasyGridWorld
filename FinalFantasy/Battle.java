@@ -28,6 +28,7 @@ public class Battle {
     {
         // initialise instance variables
         System.out.print('\u000C');
+        System.out.println("Pressith thine key 1 to attack, 2 to usith ye spell, and 3 to flee.");
         System.out.println("A battle started");
         character = c;
         enemy = new Enemy(character.getLevel());
@@ -145,6 +146,7 @@ public class Battle {
         //throws epic intentional error
         g.killThePlayer();
         world.setBattle(null);
+        System.out.print('\u000C');
         System.out.println("You lost the battle!");
         System.out.println("As you slowly die, you see the words 'null pointer exception'");
     }
@@ -156,6 +158,7 @@ public class Battle {
         character.addBattle();
         character.levelUpCheck();
         world.setBattle(null);
+        System.out.print('\u000C');
         System.out.println("You won the battle!");
     }
 

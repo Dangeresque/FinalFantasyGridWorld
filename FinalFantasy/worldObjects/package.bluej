@@ -1,16 +1,16 @@
 #BlueJ package file
-package.editor.height=400
+package.editor.height=405
 package.editor.width=560
-package.editor.x=-99
-package.editor.y=452
+package.editor.x=344
+package.editor.y=347
 package.numDependencies=0
 package.numTargets=7
 package.showExtends=true
 package.showUses=true
 target1.editor.height=700
 target1.editor.width=900
-target1.editor.x=495
-target1.editor.y=137
+target1.editor.x=94
+target1.editor.y=115
 target1.height=50
 target1.name=GridItem
 target1.naviview.expanded=true

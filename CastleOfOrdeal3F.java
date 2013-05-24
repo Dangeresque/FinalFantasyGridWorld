@@ -34,7 +34,7 @@ public class CastleOfOrdeal3F
     public static void main(String[] args)
     {
         double ran = Math.random();
-        if(ran < .3)
+        if(ran < .33)
         {
             f = new File("dungeon.wav");
             s = new SoundPlayer(f);
@@ -127,7 +127,7 @@ public class CastleOfOrdeal3F
         world.add(locs.get(142), new Obstacle());
         world.add(locs.get(143), new Obstacle());
         world.add(locs.get(144), new Obstacle());
-        world.add(locs.get(145), new Door("Ordeal0"));
+        world.add(locs.get(145), new Door("Ordeal"));
         world.add(locs.get(146), new Obstacle());
         world.add(locs.get(147), new Obstacle());
         world.add(locs.get(148), new Obstacle());
@@ -227,7 +227,7 @@ public class CastleOfOrdeal3F
         world.add(locs.get(544), new Obstacle());
         world.add(locs.get(549), new Obstacle());
         world.add(locs.get(550), new Obstacle());
-        world.add(locs.get(551), new GridItem(new Key("Ordeal0")));
+        world.add(locs.get(551), new GridItem(new Key("Ordeal")));
         world.add(locs.get(552), new GridItem(new Armor(2)));
         world.add(locs.get(553), new GridItem(new Weapon(5)));
         world.add(locs.get(554), new GridItem(new Armor(1)));
@@ -260,6 +260,8 @@ public class CastleOfOrdeal3F
 
         RPGListner mover = new RPGListner(world);
         world.getJFrame().getDisplay().moveLocation(playerLoc.getRow(), playerLoc.getCol());
+
+        System.out.println("Usith thine W, A, S, and D keys to moveith thine self about");
 
         s.play();
     }
