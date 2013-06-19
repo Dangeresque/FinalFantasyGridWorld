@@ -129,7 +129,7 @@ public class Battle {
      * Attempt to flee the battle.
      */
     public void flee() {
-        if (Math.random() <= 0.6) {
+        if (Math.random() <= 0.9) {
             System.out.println("Got away safely!");
             endBattle();
         } else {
