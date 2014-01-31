@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=contained
-comment0.target=GridItem(FinalFantasy.Item)
-comment0.text=\r\n\ Constructs\ a\ GridItem\ along\ with\ the\ name\ of\ the\ item\ it\ contains\r\n\ @param\ contained\ the\ name\ of\ the\ item\ contained\r\n
-comment1.params=p
-comment1.target=void\ interact(RPGGrid.actor.ThePlayer)
-comment1.text=\r\n\ Gives\ the\ player\ its\ item\ if\ not\ already\ given,\ otherwise\ acts\ as\ a\ wall.\r\n\ If\ the\ player\ has\ no\ weapon/armor,\ or\ the\ current\ weapon/\ armor\ is\ weaker\r\n\ than\ the\ found\ one,\ the\ new\ on\ will\ be\ equipped.\r\n\ @param\ the\ player\ trying\ to\ get\ the\ item\r\n
-numComments=2

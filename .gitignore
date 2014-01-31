@@ -11,3 +11,5 @@
 *.ctxt
 .DS_Store
 Thumbs.db
+
+doc/

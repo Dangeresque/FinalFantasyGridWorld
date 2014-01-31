@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=m
-comment0.target=Person(java.lang.String)
-comment0.text=\r\n\ Constructs\ a\ person\ along\ with\ a\ custom\ message.\r\n\ @param\ m\:\ the\ string\ a\ person\ will\ say\ when\ interacted\ with\r\n
-comment1.params=p
-comment1.target=void\ interact(RPGGrid.actor.ThePlayer)
-comment1.text=\r\n\ Prints\ out\ the\ Person's\ message\ when\ called\r\n\ @param\ p\:\ the\ player\ who\ initiated\ the\ method\r\n
-numComments=2

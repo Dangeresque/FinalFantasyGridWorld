@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=w
-comment0.target=RPGListner(RPGGrid.world.RPGWorld)
-comment0.text=\r\n\ Constructs\ a\ RPGListner\ that\ manages\ player\ input\ and\ hotkeys\r\n\ in\ a\ given\ world.\r\n\ @param\ w\ The\ world\ for\ the\ KeyListners\ to\ be\ added\ to.\r\n
-comment1.params=arg0
-comment1.target=void\ keyPressed(java.awt.event.KeyEvent)
-numComments=2
