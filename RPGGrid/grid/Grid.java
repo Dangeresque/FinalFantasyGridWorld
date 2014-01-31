@@ -124,7 +124,7 @@ public interface Grid<E>
      * Precondition: <code>loc</code> is valid in this grid
      * @param loc a location in this grid
      * @return an array list of the valid occupied locations adjacent to
-     * <code>loc</code> in this grid
+     * <code>loc</code>in this grid
      */
     ArrayList<Location> getOccupiedAdjacentLocations(Location loc);
 

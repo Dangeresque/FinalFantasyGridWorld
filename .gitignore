@@ -8,5 +8,6 @@
 *.war
 *.ear
 *.bluej
+*.ctxt
 .DS_Store
 Thumbs.db
